@@ -1,0 +1,46 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Environments
+.venv/
+venv/
+env/
+.env
+.env.*
+
+# Local editor / agent state
+.vscode/
+.idea/
+.codex
+
+# Experiment outputs and model artifacts
+outputs/
+runs/
+results/
+artifacts/
+checkpoints/
+models/
+wandb/
+mlruns/
+tensorboard/
+*.ckpt
+*.pt
+*.pth
+*.onnx
+
+# Logs and temporary files
+*.log
+*.tmp
+*.bak
+.DS_Store
+
+# Local reference documents not intended for repository upload
+docs/recent_benchmark/
+docs/thesis/

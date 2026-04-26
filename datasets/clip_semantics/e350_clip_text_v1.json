@@ -1,0 +1,442 @@
+{
+  "aesthetic_projection_vector": [
+    0.24,
+    0.22,
+    0.2,
+    0.18,
+    0.16
+  ],
+  "axis_labels": [
+    "aesthetic_luxury",
+    "aesthetic_sporty",
+    "aesthetic_modern_tech",
+    "aesthetic_premium_material",
+    "aesthetic_visual_impact"
+  ],
+  "axis_prompts": {
+    "aesthetic_luxury": "a luxury premium elegant high-status car design",
+    "aesthetic_modern_tech": "a modern high-tech futuristic digital car design",
+    "aesthetic_premium_material": "a premium material-rich handcrafted interior design",
+    "aesthetic_sporty": "a sporty aggressive dynamic performance-oriented car design",
+    "aesthetic_visual_impact": "a visually striking bold attention-grabbing car design"
+  },
+  "catalog_path": "catalog/e350_core_catalog.yaml",
+  "catalog_sha256": "043c031b7d4de7e5ca1c768a80af8e68c8fe1b0bd708e25e2ece0a23aac62302",
+  "clip_backend": {
+    "device": "cuda",
+    "library": "open-clip-torch",
+    "model_name": "ViT-B-32",
+    "open_clip_version": "3.3.0",
+    "pretrained": "openai",
+    "tokenizer": "ViT-B-32",
+    "torch_version": "2.10.0+cu130"
+  },
+  "content_sha256": "9291b0be16d5cd335b4e0905229089d4da36a18f9e0927a71c82c66aa22c3468",
+  "created_at_utc": "2026-03-10T02:29:41.945418+00:00",
+  "record_count": 20,
+  "records": [
+    {
+      "axis_scores": {
+        "aesthetic_luxury": 0.832277,
+        "aesthetic_modern_tech": 0.828231,
+        "aesthetic_premium_material": 0.830564,
+        "aesthetic_sporty": 0.829726,
+        "aesthetic_visual_impact": 0.819055
+      },
+      "clip_prompt_en": "Burmester 4D surround audio system, high-end immersive cabin experience",
+      "dimension": "audio",
+      "option_key": "audio.burmester_4d",
+      "price_delta_usd": 1030.0,
+      "semantic_vector": [
+        0.832277,
+        0.829726,
+        0.828231,
+        0.830564,
+        0.819055
+      ]
+    },
+    {
+      "axis_scores": {
+        "aesthetic_luxury": 0.910291,
+        "aesthetic_modern_tech": 0.892661,
+        "aesthetic_premium_material": 0.904333,
+        "aesthetic_sporty": 0.902626,
+        "aesthetic_visual_impact": 0.892685
+      },
+      "clip_prompt_en": "multicontour seats with massage comfort package, executive luxury seating",
+      "dimension": "comfort",
+      "option_key": "comfort.multicontour_package",
+      "price_delta_usd": 2950.0,
+      "semantic_vector": [
+        0.910291,
+        0.902626,
+        0.892661,
+        0.904333,
+        0.892685
+      ]
+    },
+    {
+      "axis_scores": {
+        "aesthetic_luxury": 0.917567,
+        "aesthetic_modern_tech": 0.904394,
+        "aesthetic_premium_material": 0.930817,
+        "aesthetic_sporty": 0.913653,
+        "aesthetic_visual_impact": 0.891501
+      },
+      "clip_prompt_en": "ventilated or heated seat comfort upgrade, premium daily comfort",
+      "dimension": "comfort",
+      "option_key": "comfort.seat_comfort_upgrade",
+      "price_delta_usd": 500.0,
+      "semantic_vector": [
+        0.917567,
+        0.913653,
+        0.904394,
+        0.930817,
+        0.891501
+      ]
+    },
+    {
+      "axis_scores": {
+        "aesthetic_luxury": 0.917729,
+        "aesthetic_modern_tech": 0.901243,
+        "aesthetic_premium_material": 0.929567,
+        "aesthetic_sporty": 0.920471,
+        "aesthetic_visual_impact": 0.893894
+      },
+      "clip_prompt_en": "soft-close doors, luxury convenience refinement",
+      "dimension": "comfort",
+      "option_key": "comfort.soft_close_doors",
+      "price_delta_usd": 550.0,
+      "semantic_vector": [
+        0.917729,
+        0.920471,
+        0.901243,
+        0.929567,
+        0.893894
+      ]
+    },
+    {
+      "axis_scores": {
+        "aesthetic_luxury": 0.926076,
+        "aesthetic_modern_tech": 0.909495,
+        "aesthetic_premium_material": 0.906758,
+        "aesthetic_sporty": 0.93517,
+        "aesthetic_visual_impact": 0.914758
+      },
+      "clip_prompt_en": "night package and illuminated grille styling, bold premium exterior",
+      "dimension": "exterior_style",
+      "option_key": "exterior_style.styling_upgrade",
+      "price_delta_usd": 400.0,
+      "semantic_vector": [
+        0.926076,
+        0.93517,
+        0.909495,
+        0.906758,
+        0.914758
+      ]
+    },
+    {
+      "axis_scores": {
+        "aesthetic_luxury": 0.890702,
+        "aesthetic_modern_tech": 0.89594,
+        "aesthetic_premium_material": 0.890612,
+        "aesthetic_sporty": 0.891851,
+        "aesthetic_visual_impact": 0.874011
+      },
+      "clip_prompt_en": "DIGITAL LIGHT adaptive headlamps, cutting-edge premium lighting design",
+      "dimension": "lighting",
+      "option_key": "lighting.digital_light",
+      "price_delta_usd": 990.0,
+      "semantic_vector": [
+        0.890702,
+        0.891851,
+        0.89594,
+        0.890612,
+        0.874011
+      ]
+    },
+    {
+      "axis_scores": {
+        "aesthetic_luxury": 0.917545,
+        "aesthetic_modern_tech": 0.889067,
+        "aesthetic_premium_material": 0.921182,
+        "aesthetic_sporty": 0.914983,
+        "aesthetic_visual_impact": 0.894025
+      },
+      "clip_prompt_en": "exclusive MANUFAKTUR paint, ultra-premium luxury appearance",
+      "dimension": "paint_color",
+      "option_key": "paint_color.paint_manufaktur",
+      "price_delta_usd": 1750.0,
+      "semantic_vector": [
+        0.917545,
+        0.914983,
+        0.889067,
+        0.921182,
+        0.894025
+      ]
+    },
+    {
+      "axis_scores": {
+        "aesthetic_luxury": 0.906014,
+        "aesthetic_modern_tech": 0.884013,
+        "aesthetic_premium_material": 0.913355,
+        "aesthetic_sporty": 0.903673,
+        "aesthetic_visual_impact": 0.88497
+      },
+      "clip_prompt_en": "metallic exterior paint, refined premium finish",
+      "dimension": "paint_color",
+      "option_key": "paint_color.paint_metallic",
+      "price_delta_usd": 750.0,
+      "semantic_vector": [
+        0.906014,
+        0.903673,
+        0.884013,
+        0.913355,
+        0.88497
+      ]
+    },
+    {
+      "axis_scores": {
+        "aesthetic_luxury": 0.91045,
+        "aesthetic_modern_tech": 0.893852,
+        "aesthetic_premium_material": 0.895428,
+        "aesthetic_sporty": 0.913003,
+        "aesthetic_visual_impact": 0.898288
+      },
+      "clip_prompt_en": "standard solid exterior paint, conservative mainstream sedan look",
+      "dimension": "paint_color",
+      "option_key": "paint_color.paint_standard",
+      "price_delta_usd": 0.0,
+      "semantic_vector": [
+        0.91045,
+        0.913003,
+        0.893852,
+        0.895428,
+        0.898288
+      ]
+    },
+    {
+      "axis_scores": {
+        "aesthetic_luxury": 0.918968,
+        "aesthetic_modern_tech": 0.898828,
+        "aesthetic_premium_material": 0.907498,
+        "aesthetic_sporty": 0.940145,
+        "aesthetic_visual_impact": 0.902245
+      },
+      "clip_prompt_en": "AIRMATIC suspension package, dynamic premium ride and handling",
+      "dimension": "performance",
+      "option_key": "performance.airmatic_package",
+      "price_delta_usd": 3200.0,
+      "semantic_vector": [
+        0.918968,
+        0.940145,
+        0.898828,
+        0.907498,
+        0.902245
+      ]
+    },
+    {
+      "axis_scores": {
+        "aesthetic_luxury": 0.926637,
+        "aesthetic_modern_tech": 0.92155,
+        "aesthetic_premium_material": 0.92008,
+        "aesthetic_sporty": 0.942499,
+        "aesthetic_visual_impact": 0.914124
+      },
+      "clip_prompt_en": "advanced driver assistance package, confidence-inspiring premium safety technology",
+      "dimension": "safety",
+      "option_key": "safety.driver_assistance_package",
+      "price_delta_usd": 1950.0,
+      "semantic_vector": [
+        0.926637,
+        0.942499,
+        0.92155,
+        0.92008,
+        0.914124
+      ]
+    },
+    {
+      "axis_scores": {
+        "aesthetic_luxury": 0.86648,
+        "aesthetic_modern_tech": 0.901313,
+        "aesthetic_premium_material": 0.870946,
+        "aesthetic_sporty": 0.864629,
+        "aesthetic_visual_impact": 0.861598
+      },
+      "clip_prompt_en": "MBUX superscreen cockpit, futuristic high-tech digital interior",
+      "dimension": "technology",
+      "option_key": "technology.mbux_superscreen",
+      "price_delta_usd": 1500.0,
+      "semantic_vector": [
+        0.86648,
+        0.864629,
+        0.901313,
+        0.870946,
+        0.861598
+      ]
+    },
+    {
+      "axis_scores": {
+        "aesthetic_luxury": 0.926989,
+        "aesthetic_modern_tech": 0.902818,
+        "aesthetic_premium_material": 0.956184,
+        "aesthetic_sporty": 0.918543,
+        "aesthetic_visual_impact": 0.897707
+      },
+      "clip_prompt_en": "premium wood or metallic trim, upscale interior details",
+      "dimension": "trim",
+      "option_key": "trim.premium_trim",
+      "price_delta_usd": 150.0,
+      "semantic_vector": [
+        0.926989,
+        0.918543,
+        0.902818,
+        0.956184,
+        0.897707
+      ]
+    },
+    {
+      "axis_scores": {
+        "aesthetic_luxury": 0.924211,
+        "aesthetic_modern_tech": 0.912866,
+        "aesthetic_premium_material": 0.940736,
+        "aesthetic_sporty": 0.921265,
+        "aesthetic_visual_impact": 0.901548
+      },
+      "clip_prompt_en": "standard interior trim, clean understated cabin style",
+      "dimension": "trim",
+      "option_key": "trim.standard_trim",
+      "price_delta_usd": 0.0,
+      "semantic_vector": [
+        0.924211,
+        0.921265,
+        0.912866,
+        0.940736,
+        0.901548
+      ]
+    },
+    {
+      "axis_scores": {
+        "aesthetic_luxury": 0.922427,
+        "aesthetic_modern_tech": 0.90021,
+        "aesthetic_premium_material": 0.929164,
+        "aesthetic_sporty": 0.910621,
+        "aesthetic_visual_impact": 0.892503
+      },
+      "clip_prompt_en": "genuine leather seats, premium comfort interior",
+      "dimension": "upholstery",
+      "option_key": "upholstery.leather",
+      "price_delta_usd": 1620.0,
+      "semantic_vector": [
+        0.922427,
+        0.910621,
+        0.90021,
+        0.929164,
+        0.892503
+      ]
+    },
+    {
+      "axis_scores": {
+        "aesthetic_luxury": 0.902381,
+        "aesthetic_modern_tech": 0.884045,
+        "aesthetic_premium_material": 0.928499,
+        "aesthetic_sporty": 0.90008,
+        "aesthetic_visual_impact": 0.885749
+      },
+      "clip_prompt_en": "MB-Tex interior upholstery, durable entry premium cabin",
+      "dimension": "upholstery",
+      "option_key": "upholstery.mb_tex",
+      "price_delta_usd": 0.0,
+      "semantic_vector": [
+        0.902381,
+        0.90008,
+        0.884045,
+        0.928499,
+        0.885749
+      ]
+    },
+    {
+      "axis_scores": {
+        "aesthetic_luxury": 0.922051,
+        "aesthetic_modern_tech": 0.90576,
+        "aesthetic_premium_material": 0.93243,
+        "aesthetic_sporty": 0.910603,
+        "aesthetic_visual_impact": 0.898482
+      },
+      "clip_prompt_en": "Nappa leather interior, handcrafted ultra-luxury comfort",
+      "dimension": "upholstery",
+      "option_key": "upholstery.nappa_leather",
+      "price_delta_usd": 2990.0,
+      "semantic_vector": [
+        0.922051,
+        0.910603,
+        0.90576,
+        0.93243,
+        0.898482
+      ]
+    },
+    {
+      "axis_scores": {
+        "aesthetic_luxury": 0.932619,
+        "aesthetic_modern_tech": 0.91906,
+        "aesthetic_premium_material": 0.908416,
+        "aesthetic_sporty": 0.942232,
+        "aesthetic_visual_impact": 0.919969
+      },
+      "clip_prompt_en": "18-inch standard wheels, practical balanced styling",
+      "dimension": "wheels",
+      "option_key": "wheels.wheel_18_standard",
+      "price_delta_usd": 0.0,
+      "semantic_vector": [
+        0.932619,
+        0.942232,
+        0.91906,
+        0.908416,
+        0.919969
+      ]
+    },
+    {
+      "axis_scores": {
+        "aesthetic_luxury": 0.943444,
+        "aesthetic_modern_tech": 0.920806,
+        "aesthetic_premium_material": 0.923622,
+        "aesthetic_sporty": 0.950891,
+        "aesthetic_visual_impact": 0.92805
+      },
+      "clip_prompt_en": "19-inch upgraded alloy wheels, sportier premium stance",
+      "dimension": "wheels",
+      "option_key": "wheels.wheel_19_upgrade",
+      "price_delta_usd": 600.0,
+      "semantic_vector": [
+        0.943444,
+        0.950891,
+        0.920806,
+        0.923622,
+        0.92805
+      ]
+    },
+    {
+      "axis_scores": {
+        "aesthetic_luxury": 0.923046,
+        "aesthetic_modern_tech": 0.904877,
+        "aesthetic_premium_material": 0.885787,
+        "aesthetic_sporty": 0.938766,
+        "aesthetic_visual_impact": 0.909595
+      },
+      "clip_prompt_en": "large AMG performance wheels, aggressive sporty luxury styling",
+      "dimension": "wheels",
+      "option_key": "wheels.wheel_amg_high",
+      "price_delta_usd": 1950.0,
+      "semantic_vector": [
+        0.923046,
+        0.938766,
+        0.904877,
+        0.885787,
+        0.909595
+      ]
+    }
+  ],
+  "schema_version": "clip_text_semantics_v1",
+  "seed": 123,
+  "semantic_dim": 5
+}

@@ -1,0 +1,31 @@
+# Core runtime
+numpy>=1.26,<2
+PyYAML>=6.0
+ruamel.yaml>=0.18
+gymnasium>=0.29
+negmas>=0.10
+matplotlib>=3.8
+setuptools>=65
+
+# Testing
+pytest>=8.0
+
+# PPO baseline
+stable-baselines3>=2.3
+sb3-contrib>=2.3
+tqdm>=4.66
+tensorboard>=2.16
+
+# PyTorch CUDA 12.x
+--extra-index-url https://download.pytorch.org/whl/cu121
+torch
+torchvision
+torchaudio
+open-clip-torch>=2.24
+
+# DreamerV3 / JAX CUDA 12.x
+# Install Dreamer from the upstream source tree at the pinned 3.3.1 commit.
+# The published PyPI artifacts are not sufficient for the runtime import path.
+-e git+https://github.com/danijar/dreamerv3.git@b65cf81a6fb13625af8722127459283f899a35d9#egg=dreamer
+jax[cuda12]==0.4.33
+nvidia-cuda-nvcc-cu12<=12.2

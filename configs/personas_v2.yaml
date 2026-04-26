@@ -1,0 +1,24 @@
+schema_version: persona_v2
+seed: 42
+
+persona_bank:
+  enabled: false
+  path: ../datasets/persona_bank/persona_bank.jsonl
+  split: train
+
+observable_distribution:
+  enabled: true
+  path: ./us_buyer_distribution_v2.yaml
+  use_conditionals: true
+
+hidden_mapping:
+  enabled: true
+  path: ./persona_hidden_mapping_v1.yaml
+  use_conditionals: true
+
+sampling:
+  noise_sigma_usd: 120
+  time_penalty_usd_per_round: 80
+  value_markup: 1.25
+  max_rounds: 5
+  feature_jitter_std: 0.02

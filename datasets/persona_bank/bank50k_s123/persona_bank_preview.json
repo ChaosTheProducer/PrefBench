@@ -1,0 +1,1902 @@
+[
+  {
+    "schema_version": "persona_v2",
+    "persona_id": "pb_s123_000000",
+    "split": "test",
+    "source": "distribution_hidden_mapping_v1",
+    "seed": 123,
+    "observable": {
+      "age_band": "18-25",
+      "income_band": "<60k",
+      "household_stage": "single",
+      "ownership_stage": "first_time",
+      "primary_use_case": "mixed"
+    },
+    "hidden": {
+      "decision_style": "analytic",
+      "tech_affinity_band": "high",
+      "stated_priority_top2": [
+        "comfort",
+        "safety"
+      ],
+      "reservation_price_base": 7514.6222324961645,
+      "price_sensitivity": 1.12,
+      "aesthetic_sensitivity": 0.75,
+      "patience": 3,
+      "counter_strength": 0.255,
+      "walkaway_threshold": 0.272,
+      "belief_obscurity": 0.2,
+      "brand_loyalty": 0.49000000000000005,
+      "impulsivity": 0.2,
+      "feature_weight_vector": {
+        "safety": 0.2573978899313086,
+        "comfort": 0.23460615549582603,
+        "performance": 0.14016175245942505,
+        "tech": 0.21594257090538202,
+        "aesthetics": 0.1518916312080584
+      }
+    }
+  },
+  {
+    "schema_version": "persona_v2",
+    "persona_id": "pb_s123_000001",
+    "split": "train",
+    "source": "distribution_hidden_mapping_v1",
+    "seed": 123,
+    "observable": {
+      "age_band": "50+",
+      "income_band": "<60k",
+      "household_stage": "family",
+      "ownership_stage": "replacement",
+      "primary_use_case": "family"
+    },
+    "hidden": {
+      "decision_style": "balanced",
+      "tech_affinity_band": "medium",
+      "stated_priority_top2": [
+        "comfort",
+        "safety"
+      ],
+      "reservation_price_base": 7542.714456012662,
+      "price_sensitivity": 1.0,
+      "aesthetic_sensitivity": 0.75,
+      "patience": 6,
+      "counter_strength": 0.5425000000000001,
+      "walkaway_threshold": 0.0,
+      "belief_obscurity": 0.45,
+      "brand_loyalty": 0.6100000000000001,
+      "impulsivity": 0.45,
+      "feature_weight_vector": {
+        "safety": 0.3311880592040175,
+        "comfort": 0.3075302864569073,
+        "performance": 0.05174496901332651,
+        "tech": 0.17844734878585006,
+        "aesthetics": 0.13108933653989857
+      }
+    }
+  },
+  {
+    "schema_version": "persona_v2",
+    "persona_id": "pb_s123_000002",
+    "split": "train",
+    "source": "distribution_hidden_mapping_v1",
+    "seed": 123,
+    "observable": {
+      "age_band": "36-50",
+      "income_band": "<60k",
+      "household_stage": "family",
+      "ownership_stage": "replacement",
+      "primary_use_case": "mixed"
+    },
+    "hidden": {
+      "decision_style": "expressive",
+      "tech_affinity_band": "medium",
+      "stated_priority_top2": [
+        "price",
+        "comfort"
+      ],
+      "reservation_price_base": 7075.080342271682,
+      "price_sensitivity": 0.82,
+      "aesthetic_sensitivity": 0.75,
+      "patience": 6,
+      "counter_strength": 0.505,
+      "walkaway_threshold": 0.0,
+      "belief_obscurity": 0.2,
+      "brand_loyalty": 0.6100000000000001,
+      "impulsivity": 0.2,
+      "feature_weight_vector": {
+        "safety": 0.2089657813299043,
+        "comfort": 0.2803214162812844,
+        "performance": 0.15359450690985804,
+        "tech": 0.15105606950306028,
+        "aesthetics": 0.2060622259758929
+      }
+    }
+  },
+  {
+    "schema_version": "persona_v2",
+    "persona_id": "pb_s123_000003",
+    "split": "train",
+    "source": "distribution_hidden_mapping_v1",
+    "seed": 123,
+    "observable": {
+      "age_band": "36-50",
+      "income_band": "180k+",
+      "household_stage": "family",
+      "ownership_stage": "replacement",
+      "primary_use_case": "family"
+    },
+    "hidden": {
+      "decision_style": "balanced",
+      "tech_affinity_band": "low",
+      "stated_priority_top2": [
+        "tech",
+        "comfort"
+      ],
+      "reservation_price_base": 16480.8092548667,
+      "price_sensitivity": 0.7,
+      "aesthetic_sensitivity": 0.45,
+      "patience": 4,
+      "counter_strength": 0.255,
+      "walkaway_threshold": 0.03,
+      "belief_obscurity": 0.2,
+      "brand_loyalty": 0.6100000000000001,
+      "impulsivity": 0.45,
+      "feature_weight_vector": {
+        "safety": 0.26322382591046445,
+        "comfort": 0.3090163505275437,
+        "performance": 0.0714562320511611,
+        "tech": 0.2153009818562668,
+        "aesthetics": 0.1410026096545638
+      }
+    }
+  },
+  {
+    "schema_version": "persona_v2",
+    "persona_id": "pb_s123_000004",
+    "split": "train",
+    "source": "distribution_hidden_mapping_v1",
+    "seed": 123,
+    "observable": {
+      "age_band": "18-25",
+      "income_band": "60-100k",
+      "household_stage": "single",
+      "ownership_stage": "additional",
+      "primary_use_case": "commute"
+    },
+    "hidden": {
+      "decision_style": "balanced",
+      "tech_affinity_band": "high",
+      "stated_priority_top2": [
+        "comfort",
+        "safety"
+      ],
+      "reservation_price_base": 8505.493769642164,
+      "price_sensitivity": 1.3,
+      "aesthetic_sensitivity": 1.1300000000000001,
+      "patience": 4,
+      "counter_strength": 0.5425000000000001,
+      "walkaway_threshold": 0.17,
+      "belief_obscurity": 0.45,
+      "brand_loyalty": 0.37999999999999995,
+      "impulsivity": 0.2,
+      "feature_weight_vector": {
+        "safety": 0.26236174885144015,
+        "comfort": 0.3157363144883064,
+        "performance": 0.0824170154830411,
+        "tech": 0.1689828165719078,
+        "aesthetics": 0.17050210460530457
+      }
+    }
+  },
+  {
+    "schema_version": "persona_v2",
+    "persona_id": "pb_s123_000005",
+    "split": "test",
+    "source": "distribution_hidden_mapping_v1",
+    "seed": 123,
+    "observable": {
+      "age_band": "50+",
+      "income_band": "100-180k",
+      "household_stage": "single",
+      "ownership_stage": "additional",
+      "primary_use_case": "luxury"
+    },
+    "hidden": {
+      "decision_style": "balanced",
+      "tech_affinity_band": "medium",
+      "stated_priority_top2": [
+        "tech",
+        "comfort"
+      ],
+      "reservation_price_base": 14701.737571917025,
+      "price_sensitivity": 0.95,
+      "aesthetic_sensitivity": 0.83,
+      "patience": 6,
+      "counter_strength": 0.5425000000000001,
+      "walkaway_threshold": 0.13499999999999998,
+      "belief_obscurity": 0.45,
+      "brand_loyalty": 0.67,
+      "impulsivity": 0.75,
+      "feature_weight_vector": {
+        "safety": 0.12933806200691894,
+        "comfort": 0.2886233335504245,
+        "performance": 0.10431041345406243,
+        "tech": 0.24893668832800586,
+        "aesthetics": 0.22879150266058826
+      }
+    }
+  },
+  {
+    "schema_version": "persona_v2",
+    "persona_id": "pb_s123_000006",
+    "split": "val",
+    "source": "distribution_hidden_mapping_v1",
+    "seed": 123,
+    "observable": {
+      "age_band": "36-50",
+      "income_band": "100-180k",
+      "household_stage": "couple",
+      "ownership_stage": "additional",
+      "primary_use_case": "luxury"
+    },
+    "hidden": {
+      "decision_style": "balanced",
+      "tech_affinity_band": "medium",
+      "stated_priority_top2": [
+        "aesthetics",
+        "comfort"
+      ],
+      "reservation_price_base": 12499.592477657188,
+      "price_sensitivity": 1.3,
+      "aesthetic_sensitivity": 0.53,
+      "patience": 3,
+      "counter_strength": 0.32999999999999996,
+      "walkaway_threshold": 0.29,
+      "belief_obscurity": 0.7,
+      "brand_loyalty": 0.42,
+      "impulsivity": 0.45,
+      "feature_weight_vector": {
+        "safety": 0.13900667701837224,
+        "comfort": 0.277003766972082,
+        "performance": 0.10657570321455144,
+        "tech": 0.1542309913489758,
+        "aesthetics": 0.3231828614460185
+      }
+    }
+  },
+  {
+    "schema_version": "persona_v2",
+    "persona_id": "pb_s123_000007",
+    "split": "train",
+    "source": "distribution_hidden_mapping_v1",
+    "seed": 123,
+    "observable": {
+      "age_band": "50+",
+      "income_band": "100-180k",
+      "household_stage": "couple",
+      "ownership_stage": "additional",
+      "primary_use_case": "family"
+    },
+    "hidden": {
+      "decision_style": "balanced",
+      "tech_affinity_band": "medium",
+      "stated_priority_top2": [
+        "safety",
+        "tech"
+      ],
+      "reservation_price_base": 13077.536121749596,
+      "price_sensitivity": 0.95,
+      "aesthetic_sensitivity": 0.53,
+      "patience": 5,
+      "counter_strength": 0.7925000000000001,
+      "walkaway_threshold": 0.095,
+      "belief_obscurity": 0.45,
+      "brand_loyalty": 0.5900000000000001,
+      "impulsivity": 0.45,
+      "feature_weight_vector": {
+        "safety": 0.33058780876328275,
+        "comfort": 0.2421676433068209,
+        "performance": 0.07192467841315707,
+        "tech": 0.23154805090169983,
+        "aesthetics": 0.1237718186150394
+      }
+    }
+  },
+  {
+    "schema_version": "persona_v2",
+    "persona_id": "pb_s123_000008",
+    "split": "val",
+    "source": "distribution_hidden_mapping_v1",
+    "seed": 123,
+    "observable": {
+      "age_band": "36-50",
+      "income_band": "180k+",
+      "household_stage": "couple",
+      "ownership_stage": "replacement",
+      "primary_use_case": "mixed"
+    },
+    "hidden": {
+      "decision_style": "analytic",
+      "tech_affinity_band": "high",
+      "stated_priority_top2": [
+        "price",
+        "comfort"
+      ],
+      "reservation_price_base": 15406.512718211154,
+      "price_sensitivity": 1.4700000000000002,
+      "aesthetic_sensitivity": 0.45,
+      "patience": 6,
+      "counter_strength": 0.505,
+      "walkaway_threshold": 0.157,
+      "belief_obscurity": 0.2,
+      "brand_loyalty": 0.6500000000000001,
+      "impulsivity": 0.75,
+      "feature_weight_vector": {
+        "safety": 0.2398455496639206,
+        "comfort": 0.25326748402412935,
+        "performance": 0.1375307583317019,
+        "tech": 0.22933948794724998,
+        "aesthetics": 0.14001672003299814
+      }
+    }
+  },
+  {
+    "schema_version": "persona_v2",
+    "persona_id": "pb_s123_000009",
+    "split": "val",
+    "source": "distribution_hidden_mapping_v1",
+    "seed": 123,
+    "observable": {
+      "age_band": "36-50",
+      "income_band": "180k+",
+      "household_stage": "couple",
+      "ownership_stage": "replacement",
+      "primary_use_case": "family"
+    },
+    "hidden": {
+      "decision_style": "balanced",
+      "tech_affinity_band": "medium",
+      "stated_priority_top2": [
+        "comfort",
+        "safety"
+      ],
+      "reservation_price_base": 16747.539805999888,
+      "price_sensitivity": 1.35,
+      "aesthetic_sensitivity": 0.75,
+      "patience": 7,
+      "counter_strength": 0.2925,
+      "walkaway_threshold": 0.0,
+      "belief_obscurity": 0.45,
+      "brand_loyalty": 0.6100000000000001,
+      "impulsivity": 0.45,
+      "feature_weight_vector": {
+        "safety": 0.27926610471303376,
+        "comfort": 0.3341063982001968,
+        "performance": 0.07707727483799272,
+        "tech": 0.16025968882064548,
+        "aesthetics": 0.14929053342813134
+      }
+    }
+  },
+  {
+    "schema_version": "persona_v2",
+    "persona_id": "pb_s123_000010",
+    "split": "train",
+    "source": "distribution_hidden_mapping_v1",
+    "seed": 123,
+    "observable": {
+      "age_band": "50+",
+      "income_band": "100-180k",
+      "household_stage": "family",
+      "ownership_stage": "additional",
+      "primary_use_case": "mixed"
+    },
+    "hidden": {
+      "decision_style": "analytic",
+      "tech_affinity_band": "medium",
+      "stated_priority_top2": [
+        "aesthetics",
+        "comfort"
+      ],
+      "reservation_price_base": 13292.179160760432,
+      "price_sensitivity": 0.95,
+      "aesthetic_sensitivity": 0.53,
+      "patience": 4,
+      "counter_strength": 0.2925,
+      "walkaway_threshold": 0.08499999999999999,
+      "belief_obscurity": 0.45,
+      "brand_loyalty": 0.5900000000000001,
+      "impulsivity": 0.45,
+      "feature_weight_vector": {
+        "safety": 0.21921762869179773,
+        "comfort": 0.24706654362183453,
+        "performance": 0.13042732922896133,
+        "tech": 0.18653491204390127,
+        "aesthetics": 0.21675358641350512
+      }
+    }
+  },
+  {
+    "schema_version": "persona_v2",
+    "persona_id": "pb_s123_000011",
+    "split": "train",
+    "source": "distribution_hidden_mapping_v1",
+    "seed": 123,
+    "observable": {
+      "age_band": "26-35",
+      "income_band": "180k+",
+      "household_stage": "couple",
+      "ownership_stage": "replacement",
+      "primary_use_case": "commute"
+    },
+    "hidden": {
+      "decision_style": "analytic",
+      "tech_affinity_band": "medium",
+      "stated_priority_top2": [
+        "price",
+        "comfort"
+      ],
+      "reservation_price_base": 20648.880324169186,
+      "price_sensitivity": 0.82,
+      "aesthetic_sensitivity": 1.05,
+      "patience": 5,
+      "counter_strength": 0.7925000000000001,
+      "walkaway_threshold": 0.0019999999999999983,
+      "belief_obscurity": 0.45,
+      "brand_loyalty": 0.8600000000000001,
+      "impulsivity": 0.45,
+      "feature_weight_vector": {
+        "safety": 0.26438224687499384,
+        "comfort": 0.29656527989541015,
+        "performance": 0.06972516555359232,
+        "tech": 0.2248418883497326,
+        "aesthetics": 0.1444854193262711
+      }
+    }
+  },
+  {
+    "schema_version": "persona_v2",
+    "persona_id": "pb_s123_000012",
+    "split": "val",
+    "source": "distribution_hidden_mapping_v1",
+    "seed": 123,
+    "observable": {
+      "age_band": "50+",
+      "income_band": "60-100k",
+      "household_stage": "family",
+      "ownership_stage": "first_time",
+      "primary_use_case": "performance"
+    },
+    "hidden": {
+      "decision_style": "balanced",
+      "tech_affinity_band": "low",
+      "stated_priority_top2": [
+        "price",
+        "comfort"
+      ],
+      "reservation_price_base": 9384.512421241141,
+      "price_sensitivity": 1.1600000000000001,
+      "aesthetic_sensitivity": 0.75,
+      "patience": 2,
+      "counter_strength": 0.32999999999999996,
+      "walkaway_threshold": 0.316,
+      "belief_obscurity": 0.7,
+      "brand_loyalty": 0.19999999999999998,
+      "impulsivity": 0.2,
+      "feature_weight_vector": {
+        "safety": 0.10331816817809844,
+        "comfort": 0.24846300002940946,
+        "performance": 0.37737730495607286,
+        "tech": 0.15350649396302868,
+        "aesthetics": 0.11733503287339059
+      }
+    }
+  },
+  {
+    "schema_version": "persona_v2",
+    "persona_id": "pb_s123_000013",
+    "split": "train",
+    "source": "distribution_hidden_mapping_v1",
+    "seed": 123,
+    "observable": {
+      "age_band": "36-50",
+      "income_band": "100-180k",
+      "household_stage": "family",
+      "ownership_stage": "replacement",
+      "primary_use_case": "commute"
+    },
+    "hidden": {
+      "decision_style": "analytic",
+      "tech_affinity_band": "high",
+      "stated_priority_top2": [
+        "aesthetics",
+        "comfort"
+      ],
+      "reservation_price_base": 14128.527402728343,
+      "price_sensitivity": 1.35,
+      "aesthetic_sensitivity": 0.75,
+      "patience": 4,
+      "counter_strength": 0.505,
+      "walkaway_threshold": 0.09500000000000001,
+      "belief_obscurity": 0.2,
+      "brand_loyalty": 0.9000000000000001,
+      "impulsivity": 0.2,
+      "feature_weight_vector": {
+        "safety": 0.2192431808556602,
+        "comfort": 0.2989438796990381,
+        "performance": 0.056170170337681354,
+        "tech": 0.21082044607918848,
+        "aesthetics": 0.21482232302843193
+      }
+    }
+  },
+  {
+    "schema_version": "persona_v2",
+    "persona_id": "pb_s123_000014",
+    "split": "train",
+    "source": "distribution_hidden_mapping_v1",
+    "seed": 123,
+    "observable": {
+      "age_band": "50+",
+      "income_band": "60-100k",
+      "household_stage": "single",
+      "ownership_stage": "replacement",
+      "primary_use_case": "mixed"
+    },
+    "hidden": {
+      "decision_style": "analytic",
+      "tech_affinity_band": "medium",
+      "stated_priority_top2": [
+        "price",
+        "comfort"
+      ],
+      "reservation_price_base": 10378.935222305183,
+      "price_sensitivity": 1.12,
+      "aesthetic_sensitivity": 1.05,
+      "patience": 6,
+      "counter_strength": 0.2925,
+      "walkaway_threshold": 0.0,
+      "belief_obscurity": 0.45,
+      "brand_loyalty": 0.36,
+      "impulsivity": 0.45,
+      "feature_weight_vector": {
+        "safety": 0.24526353099022596,
+        "comfort": 0.25878985615358235,
+        "performance": 0.14160267292804127,
+        "tech": 0.23969245351574922,
+        "aesthetics": 0.11465148641240129
+      }
+    }
+  },
+  {
+    "schema_version": "persona_v2",
+    "persona_id": "pb_s123_000015",
+    "split": "train",
+    "source": "distribution_hidden_mapping_v1",
+    "seed": 123,
+    "observable": {
+      "age_band": "36-50",
+      "income_band": "60-100k",
+      "household_stage": "single",
+      "ownership_stage": "replacement",
+      "primary_use_case": "luxury"
+    },
+    "hidden": {
+      "decision_style": "expressive",
+      "tech_affinity_band": "high",
+      "stated_priority_top2": [
+        "aesthetics",
+        "comfort"
+      ],
+      "reservation_price_base": 12418.842719148946,
+      "price_sensitivity": 1.0,
+      "aesthetic_sensitivity": 0.45,
+      "patience": 6,
+      "counter_strength": 0.7925000000000001,
+      "walkaway_threshold": 0.030000000000000006,
+      "belief_obscurity": 0.45,
+      "brand_loyalty": 0.98,
+      "impulsivity": 0.75,
+      "feature_weight_vector": {
+        "safety": 0.12588691370124974,
+        "comfort": 0.23853157220789714,
+        "performance": 0.13553086783113943,
+        "tech": 0.16418237148691148,
+        "aesthetics": 0.3358682747728021
+      }
+    }
+  },
+  {
+    "schema_version": "persona_v2",
+    "persona_id": "pb_s123_000016",
+    "split": "val",
+    "source": "distribution_hidden_mapping_v1",
+    "seed": 123,
+    "observable": {
+      "age_band": "50+",
+      "income_band": "180k+",
+      "household_stage": "couple",
+      "ownership_stage": "replacement",
+      "primary_use_case": "mixed"
+    },
+    "hidden": {
+      "decision_style": "analytic",
+      "tech_affinity_band": "medium",
+      "stated_priority_top2": [
+        "safety",
+        "tech"
+      ],
+      "reservation_price_base": 18122.800521934892,
+      "price_sensitivity": 1.0,
+      "aesthetic_sensitivity": 0.75,
+      "patience": 5,
+      "counter_strength": 0.2925,
+      "walkaway_threshold": 0.07,
+      "belief_obscurity": 0.45,
+      "brand_loyalty": 0.36,
+      "impulsivity": 0.45,
+      "feature_weight_vector": {
+        "safety": 0.2571885571352103,
+        "comfort": 0.1868156014640944,
+        "performance": 0.12787693774766318,
+        "tech": 0.25307978229323613,
+        "aesthetics": 0.17503912135979605
+      }
+    }
+  },
+  {
+    "schema_version": "persona_v2",
+    "persona_id": "pb_s123_000017",
+    "split": "train",
+    "source": "distribution_hidden_mapping_v1",
+    "seed": 123,
+    "observable": {
+      "age_band": "50+",
+      "income_band": "180k+",
+      "household_stage": "single",
+      "ownership_stage": "first_time",
+      "primary_use_case": "mixed"
+    },
+    "hidden": {
+      "decision_style": "expressive",
+      "tech_affinity_band": "high",
+      "stated_priority_top2": [
+        "tech",
+        "comfort"
+      ],
+      "reservation_price_base": 19472.40331774909,
+      "price_sensitivity": 0.82,
+      "aesthetic_sensitivity": 1.05,
+      "patience": 4,
+      "counter_strength": 0.255,
+      "walkaway_threshold": 0.282,
+      "belief_obscurity": 0.2,
+      "brand_loyalty": 0.24,
+      "impulsivity": 0.2,
+      "feature_weight_vector": {
+        "safety": 0.14430486290756284,
+        "comfort": 0.2579973805770347,
+        "performance": 0.1711659682168138,
+        "tech": 0.21691063159855825,
+        "aesthetics": 0.20962115670003065
+      }
+    }
+  },
+  {
+    "schema_version": "persona_v2",
+    "persona_id": "pb_s123_000018",
+    "split": "train",
+    "source": "distribution_hidden_mapping_v1",
+    "seed": 123,
+    "observable": {
+      "age_band": "36-50",
+      "income_band": "180k+",
+      "household_stage": "couple",
+      "ownership_stage": "additional",
+      "primary_use_case": "mixed"
+    },
+    "hidden": {
+      "decision_style": "expressive",
+      "tech_affinity_band": "medium",
+      "stated_priority_top2": [
+        "performance",
+        "aesthetics"
+      ],
+      "reservation_price_base": 19740.779225216414,
+      "price_sensitivity": 0.6499999999999999,
+      "aesthetic_sensitivity": 0.53,
+      "patience": 5,
+      "counter_strength": 0.8300000000000001,
+      "walkaway_threshold": 0.065,
+      "belief_obscurity": 0.7,
+      "brand_loyalty": 0.5900000000000001,
+      "impulsivity": 0.45,
+      "feature_weight_vector": {
+        "safety": 0.16094519969018672,
+        "comfort": 0.1807740917460563,
+        "performance": 0.2083759403838735,
+        "tech": 0.17242413568799805,
+        "aesthetics": 0.2774806324918854
+      }
+    }
+  },
+  {
+    "schema_version": "persona_v2",
+    "persona_id": "pb_s123_000019",
+    "split": "train",
+    "source": "distribution_hidden_mapping_v1",
+    "seed": 123,
+    "observable": {
+      "age_band": "50+",
+      "income_band": "60-100k",
+      "household_stage": "family",
+      "ownership_stage": "replacement",
+      "primary_use_case": "family"
+    },
+    "hidden": {
+      "decision_style": "analytic",
+      "tech_affinity_band": "high",
+      "stated_priority_top2": [
+        "price",
+        "comfort"
+      ],
+      "reservation_price_base": 9378.419038496993,
+      "price_sensitivity": 1.4700000000000002,
+      "aesthetic_sensitivity": 0.75,
+      "patience": 6,
+      "counter_strength": 0.505,
+      "walkaway_threshold": 0.07700000000000001,
+      "belief_obscurity": 0.2,
+      "brand_loyalty": 0.6500000000000001,
+      "impulsivity": 0.45,
+      "feature_weight_vector": {
+        "safety": 0.3263005325320874,
+        "comfort": 0.32808502795904515,
+        "performance": 0.02686014771720591,
+        "tech": 0.2091467075109018,
+        "aesthetics": 0.1096075842807597
+      }
+    }
+  },
+  {
+    "schema_version": "persona_v2",
+    "persona_id": "pb_s123_000020",
+    "split": "test",
+    "source": "distribution_hidden_mapping_v1",
+    "seed": 123,
+    "observable": {
+      "age_band": "36-50",
+      "income_band": "100-180k",
+      "household_stage": "couple",
+      "ownership_stage": "additional",
+      "primary_use_case": "mixed"
+    },
+    "hidden": {
+      "decision_style": "analytic",
+      "tech_affinity_band": "medium",
+      "stated_priority_top2": [
+        "performance",
+        "aesthetics"
+      ],
+      "reservation_price_base": 14378.089417878478,
+      "price_sensitivity": 0.95,
+      "aesthetic_sensitivity": 0.53,
+      "patience": 5,
+      "counter_strength": 0.7925000000000001,
+      "walkaway_threshold": 0.095,
+      "belief_obscurity": 0.45,
+      "brand_loyalty": 0.5900000000000001,
+      "impulsivity": 0.75,
+      "feature_weight_vector": {
+        "safety": 0.19590150873593085,
+        "comfort": 0.18053858454800176,
+        "performance": 0.17883490524911394,
+        "tech": 0.2251576882132556,
+        "aesthetics": 0.219567313253698
+      }
+    }
+  },
+  {
+    "schema_version": "persona_v2",
+    "persona_id": "pb_s123_000021",
+    "split": "train",
+    "source": "distribution_hidden_mapping_v1",
+    "seed": 123,
+    "observable": {
+      "age_band": "18-25",
+      "income_band": "60-100k",
+      "household_stage": "single",
+      "ownership_stage": "replacement",
+      "primary_use_case": "commute"
+    },
+    "hidden": {
+      "decision_style": "balanced",
+      "tech_affinity_band": "high",
+      "stated_priority_top2": [
+        "safety",
+        "tech"
+      ],
+      "reservation_price_base": 11153.625055730963,
+      "price_sensitivity": 1.0,
+      "aesthetic_sensitivity": 0.45,
+      "patience": 6,
+      "counter_strength": 0.755,
+      "walkaway_threshold": 0.030000000000000006,
+      "belief_obscurity": 0.2,
+      "brand_loyalty": 0.39999999999999997,
+      "impulsivity": 0.2,
+      "feature_weight_vector": {
+        "safety": 0.23724277401332805,
+        "comfort": 0.2572723054628917,
+        "performance": 0.08146630612892866,
+        "tech": 0.26565044246193925,
+        "aesthetics": 0.15836817193291236
+      }
+    }
+  },
+  {
+    "schema_version": "persona_v2",
+    "persona_id": "pb_s123_000022",
+    "split": "train",
+    "source": "distribution_hidden_mapping_v1",
+    "seed": 123,
+    "observable": {
+      "age_band": "36-50",
+      "income_band": "60-100k",
+      "household_stage": "family",
+      "ownership_stage": "replacement",
+      "primary_use_case": "family"
+    },
+    "hidden": {
+      "decision_style": "expressive",
+      "tech_affinity_band": "high",
+      "stated_priority_top2": [
+        "price",
+        "comfort"
+      ],
+      "reservation_price_base": 9221.513864710285,
+      "price_sensitivity": 1.12,
+      "aesthetic_sensitivity": 1.05,
+      "patience": 6,
+      "counter_strength": 0.5425000000000001,
+      "walkaway_threshold": 0.042000000000000016,
+      "belief_obscurity": 0.45,
+      "brand_loyalty": 0.9000000000000001,
+      "impulsivity": 0.45,
+      "feature_weight_vector": {
+        "safety": 0.2757139782706101,
+        "comfort": 0.31122257913526624,
+        "performance": 0.09914163300291699,
+        "tech": 0.12947260360473603,
+        "aesthetics": 0.18444920598647052
+      }
+    }
+  },
+  {
+    "schema_version": "persona_v2",
+    "persona_id": "pb_s123_000023",
+    "split": "test",
+    "source": "distribution_hidden_mapping_v1",
+    "seed": 123,
+    "observable": {
+      "age_band": "26-35",
+      "income_band": "60-100k",
+      "household_stage": "couple",
+      "ownership_stage": "replacement",
+      "primary_use_case": "luxury"
+    },
+    "hidden": {
+      "decision_style": "balanced",
+      "tech_affinity_band": "medium",
+      "stated_priority_top2": [
+        "aesthetics",
+        "comfort"
+      ],
+      "reservation_price_base": 9681.87034729062,
+      "price_sensitivity": 1.0,
+      "aesthetic_sensitivity": 1.05,
+      "patience": 5,
+      "counter_strength": 0.5425000000000001,
+      "walkaway_threshold": 0.07,
+      "belief_obscurity": 0.45,
+      "brand_loyalty": 0.69,
+      "impulsivity": 0.2,
+      "feature_weight_vector": {
+        "safety": 0.12638398546940835,
+        "comfort": 0.2668271636004019,
+        "performance": 0.09027913440740011,
+        "tech": 0.1549534891198725,
+        "aesthetics": 0.36155622740291726
+      }
+    }
+  },
+  {
+    "schema_version": "persona_v2",
+    "persona_id": "pb_s123_000024",
+    "split": "train",
+    "source": "distribution_hidden_mapping_v1",
+    "seed": 123,
+    "observable": {
+      "age_band": "36-50",
+      "income_band": "100-180k",
+      "household_stage": "couple",
+      "ownership_stage": "replacement",
+      "primary_use_case": "mixed"
+    },
+    "hidden": {
+      "decision_style": "balanced",
+      "tech_affinity_band": "high",
+      "stated_priority_top2": [
+        "price",
+        "comfort"
+      ],
+      "reservation_price_base": 13441.06534431661,
+      "price_sensitivity": 1.4700000000000002,
+      "aesthetic_sensitivity": 0.45,
+      "patience": 6,
+      "counter_strength": 0.5425000000000001,
+      "walkaway_threshold": 0.02700000000000003,
+      "belief_obscurity": 0.45,
+      "brand_loyalty": 0.6500000000000001,
+      "impulsivity": 0.75,
+      "feature_weight_vector": {
+        "safety": 0.19628716086907852,
+        "comfort": 0.31632232340274563,
+        "performance": 0.15844035791966304,
+        "tech": 0.18099073815339373,
+        "aesthetics": 0.14795941965511913
+      }
+    }
+  },
+  {
+    "schema_version": "persona_v2",
+    "persona_id": "pb_s123_000025",
+    "split": "test",
+    "source": "distribution_hidden_mapping_v1",
+    "seed": 123,
+    "observable": {
+      "age_band": "36-50",
+      "income_band": "100-180k",
+      "household_stage": "family",
+      "ownership_stage": "replacement",
+      "primary_use_case": "family"
+    },
+    "hidden": {
+      "decision_style": "balanced",
+      "tech_affinity_band": "medium",
+      "stated_priority_top2": [
+        "comfort",
+        "safety"
+      ],
+      "reservation_price_base": 11864.953983633894,
+      "price_sensitivity": 1.0,
+      "aesthetic_sensitivity": 1.05,
+      "patience": 5,
+      "counter_strength": 0.32999999999999996,
+      "walkaway_threshold": 0.020000000000000004,
+      "belief_obscurity": 0.7,
+      "brand_loyalty": 0.6100000000000001,
+      "impulsivity": 0.45,
+      "feature_weight_vector": {
+        "safety": 0.3134699767691114,
+        "comfort": 0.3451009130730985,
+        "performance": 0.06759952910324726,
+        "tech": 0.15076076713366177,
+        "aesthetics": 0.12306881392088097
+      }
+    }
+  },
+  {
+    "schema_version": "persona_v2",
+    "persona_id": "pb_s123_000026",
+    "split": "train",
+    "source": "distribution_hidden_mapping_v1",
+    "seed": 123,
+    "observable": {
+      "age_band": "36-50",
+      "income_band": "<60k",
+      "household_stage": "single",
+      "ownership_stage": "replacement",
+      "primary_use_case": "mixed"
+    },
+    "hidden": {
+      "decision_style": "expressive",
+      "tech_affinity_band": "medium",
+      "stated_priority_top2": [
+        "safety",
+        "tech"
+      ],
+      "reservation_price_base": 6904.216808564818,
+      "price_sensitivity": 0.7,
+      "aesthetic_sensitivity": 1.05,
+      "patience": 5,
+      "counter_strength": 0.505,
+      "walkaway_threshold": 0.0,
+      "belief_obscurity": 0.2,
+      "brand_loyalty": 0.36,
+      "impulsivity": 0.45,
+      "feature_weight_vector": {
+        "safety": 0.23589843047248557,
+        "comfort": 0.18089255965260995,
+        "performance": 0.15507621014497538,
+        "tech": 0.20915736328278625,
+        "aesthetics": 0.2189754364471429
+      }
+    }
+  },
+  {
+    "schema_version": "persona_v2",
+    "persona_id": "pb_s123_000027",
+    "split": "train",
+    "source": "distribution_hidden_mapping_v1",
+    "seed": 123,
+    "observable": {
+      "age_band": "18-25",
+      "income_band": "<60k",
+      "household_stage": "single",
+      "ownership_stage": "first_time",
+      "primary_use_case": "luxury"
+    },
+    "hidden": {
+      "decision_style": "balanced",
+      "tech_affinity_band": "medium",
+      "stated_priority_top2": [
+        "tech",
+        "comfort"
+      ],
+      "reservation_price_base": 7971.3780534599255,
+      "price_sensitivity": 0.82,
+      "aesthetic_sensitivity": 0.75,
+      "patience": 3,
+      "counter_strength": 0.2925,
+      "walkaway_threshold": 0.322,
+      "belief_obscurity": 0.45,
+      "brand_loyalty": 0.53,
+      "impulsivity": 0.75,
+      "feature_weight_vector": {
+        "safety": 0.12594822661880012,
+        "comfort": 0.29177433551535475,
+        "performance": 0.0952394562375087,
+        "tech": 0.23608353125275508,
+        "aesthetics": 0.2509544503755814
+      }
+    }
+  },
+  {
+    "schema_version": "persona_v2",
+    "persona_id": "pb_s123_000028",
+    "split": "train",
+    "source": "distribution_hidden_mapping_v1",
+    "seed": 123,
+    "observable": {
+      "age_band": "50+",
+      "income_band": "180k+",
+      "household_stage": "couple",
+      "ownership_stage": "additional",
+      "primary_use_case": "mixed"
+    },
+    "hidden": {
+      "decision_style": "balanced",
+      "tech_affinity_band": "low",
+      "stated_priority_top2": [
+        "tech",
+        "comfort"
+      ],
+      "reservation_price_base": 20184.43643191978,
+      "price_sensitivity": 0.95,
+      "aesthetic_sensitivity": 0.53,
+      "patience": 4,
+      "counter_strength": 0.255,
+      "walkaway_threshold": 0.135,
+      "belief_obscurity": 0.2,
+      "brand_loyalty": 0.5900000000000001,
+      "impulsivity": 0.45,
+      "feature_weight_vector": {
+        "safety": 0.20026951419996844,
+        "comfort": 0.2523574203810207,
+        "performance": 0.14106572155651226,
+        "tech": 0.24360051689486284,
+        "aesthetics": 0.1627068269676356
+      }
+    }
+  },
+  {
+    "schema_version": "persona_v2",
+    "persona_id": "pb_s123_000029",
+    "split": "train",
+    "source": "distribution_hidden_mapping_v1",
+    "seed": 123,
+    "observable": {
+      "age_band": "26-35",
+      "income_band": "100-180k",
+      "household_stage": "single",
+      "ownership_stage": "replacement",
+      "primary_use_case": "mixed"
+    },
+    "hidden": {
+      "decision_style": "analytic",
+      "tech_affinity_band": "medium",
+      "stated_priority_top2": [
+        "comfort",
+        "safety"
+      ],
+      "reservation_price_base": 11904.730712416169,
+      "price_sensitivity": 1.35,
+      "aesthetic_sensitivity": 0.75,
+      "patience": 7,
+      "counter_strength": 0.2925,
+      "walkaway_threshold": 0.0,
+      "belief_obscurity": 0.45,
+      "brand_loyalty": 0.36,
+      "impulsivity": 0.75,
+      "feature_weight_vector": {
+        "safety": 0.26422804074916834,
+        "comfort": 0.26169437622329017,
+        "performance": 0.11716325513116803,
+        "tech": 0.20167518845708293,
+        "aesthetics": 0.15523913943929046
+      }
+    }
+  },
+  {
+    "schema_version": "persona_v2",
+    "persona_id": "pb_s123_000030",
+    "split": "train",
+    "source": "distribution_hidden_mapping_v1",
+    "seed": 123,
+    "observable": {
+      "age_band": "36-50",
+      "income_band": "180k+",
+      "household_stage": "couple",
+      "ownership_stage": "replacement",
+      "primary_use_case": "performance"
+    },
+    "hidden": {
+      "decision_style": "expressive",
+      "tech_affinity_band": "low",
+      "stated_priority_top2": [
+        "tech",
+        "comfort"
+      ],
+      "reservation_price_base": 20443.26625963467,
+      "price_sensitivity": 0.92,
+      "aesthetic_sensitivity": 0.45,
+      "patience": 5,
+      "counter_strength": 0.2925,
+      "walkaway_threshold": 0.06200000000000001,
+      "belief_obscurity": 0.45,
+      "brand_loyalty": 0.36,
+      "impulsivity": 0.2,
+      "feature_weight_vector": {
+        "safety": 0.08471904451557806,
+        "comfort": 0.18459621646714652,
+        "performance": 0.35091992868837796,
+        "tech": 0.21436556244319896,
+        "aesthetics": 0.1653992478856986
+      }
+    }
+  },
+  {
+    "schema_version": "persona_v2",
+    "persona_id": "pb_s123_000031",
+    "split": "train",
+    "source": "distribution_hidden_mapping_v1",
+    "seed": 123,
+    "observable": {
+      "age_band": "26-35",
+      "income_band": "60-100k",
+      "household_stage": "single",
+      "ownership_stage": "replacement",
+      "primary_use_case": "commute"
+    },
+    "hidden": {
+      "decision_style": "balanced",
+      "tech_affinity_band": "low",
+      "stated_priority_top2": [
+        "safety",
+        "tech"
+      ],
+      "reservation_price_base": 11770.24776417288,
+      "price_sensitivity": 1.0,
+      "aesthetic_sensitivity": 0.45,
+      "patience": 4,
+      "counter_strength": 0.505,
+      "walkaway_threshold": 0.11000000000000001,
+      "belief_obscurity": 0.2,
+      "brand_loyalty": 0.36,
+      "impulsivity": 0.2,
+      "feature_weight_vector": {
+        "safety": 0.22983429071214198,
+        "comfort": 0.23837280439598393,
+        "performance": 0.09254166493116353,
+        "tech": 0.2756599246543459,
+        "aesthetics": 0.1635913153063645
+      }
+    }
+  },
+  {
+    "schema_version": "persona_v2",
+    "persona_id": "pb_s123_000032",
+    "split": "train",
+    "source": "distribution_hidden_mapping_v1",
+    "seed": 123,
+    "observable": {
+      "age_band": "36-50",
+      "income_band": "100-180k",
+      "household_stage": "couple",
+      "ownership_stage": "replacement",
+      "primary_use_case": "mixed"
+    },
+    "hidden": {
+      "decision_style": "analytic",
+      "tech_affinity_band": "high",
+      "stated_priority_top2": [
+        "tech",
+        "comfort"
+      ],
+      "reservation_price_base": 13535.834984129304,
+      "price_sensitivity": 1.0,
+      "aesthetic_sensitivity": 0.75,
+      "patience": 5,
+      "counter_strength": 0.505,
+      "walkaway_threshold": 0.15,
+      "belief_obscurity": 0.2,
+      "brand_loyalty": 0.39999999999999997,
+      "impulsivity": 0.45,
+      "feature_weight_vector": {
+        "safety": 0.16962776632330678,
+        "comfort": 0.25529565527617926,
+        "performance": 0.11070396065762693,
+        "tech": 0.30422702777236027,
+        "aesthetics": 0.16014558997052675
+      }
+    }
+  },
+  {
+    "schema_version": "persona_v2",
+    "persona_id": "pb_s123_000033",
+    "split": "train",
+    "source": "distribution_hidden_mapping_v1",
+    "seed": 123,
+    "observable": {
+      "age_band": "36-50",
+      "income_band": "60-100k",
+      "household_stage": "family",
+      "ownership_stage": "replacement",
+      "primary_use_case": "family"
+    },
+    "hidden": {
+      "decision_style": "analytic",
+      "tech_affinity_band": "low",
+      "stated_priority_top2": [
+        "price",
+        "comfort"
+      ],
+      "reservation_price_base": 8965.00723370453,
+      "price_sensitivity": 0.82,
+      "aesthetic_sensitivity": 0.75,
+      "patience": 5,
+      "counter_strength": 0.5800000000000001,
+      "walkaway_threshold": 0.13199999999999998,
+      "belief_obscurity": 0.7,
+      "brand_loyalty": 0.36,
+      "impulsivity": 0.2,
+      "feature_weight_vector": {
+        "safety": 0.3126594973256502,
+        "comfort": 0.31835726466957304,
+        "performance": 0.03735898373931327,
+        "tech": 0.22646402260862245,
+        "aesthetics": 0.10516023165684112
+      }
+    }
+  },
+  {
+    "schema_version": "persona_v2",
+    "persona_id": "pb_s123_000034",
+    "split": "val",
+    "source": "distribution_hidden_mapping_v1",
+    "seed": 123,
+    "observable": {
+      "age_band": "18-25",
+      "income_band": "60-100k",
+      "household_stage": "single",
+      "ownership_stage": "first_time",
+      "primary_use_case": "mixed"
+    },
+    "hidden": {
+      "decision_style": "analytic",
+      "tech_affinity_band": "high",
+      "stated_priority_top2": [
+        "performance",
+        "aesthetics"
+      ],
+      "reservation_price_base": 8813.945354176822,
+      "price_sensitivity": 1.12,
+      "aesthetic_sensitivity": 0.75,
+      "patience": 2,
+      "counter_strength": 0.5425000000000001,
+      "walkaway_threshold": 0.312,
+      "belief_obscurity": 0.45,
+      "brand_loyalty": 0.49000000000000005,
+      "impulsivity": 0.45,
+      "feature_weight_vector": {
+        "safety": 0.21069683605171172,
+        "comfort": 0.17572685074230424,
+        "performance": 0.1725220600974281,
+        "tech": 0.19502620843722615,
+        "aesthetics": 0.2460280446713298
+      }
+    }
+  },
+  {
+    "schema_version": "persona_v2",
+    "persona_id": "pb_s123_000035",
+    "split": "val",
+    "source": "distribution_hidden_mapping_v1",
+    "seed": 123,
+    "observable": {
+      "age_band": "36-50",
+      "income_band": "60-100k",
+      "household_stage": "single",
+      "ownership_stage": "replacement",
+      "primary_use_case": "family"
+    },
+    "hidden": {
+      "decision_style": "balanced",
+      "tech_affinity_band": "medium",
+      "stated_priority_top2": [
+        "comfort",
+        "safety"
+      ],
+      "reservation_price_base": 11235.289019216463,
+      "price_sensitivity": 0.7,
+      "aesthetic_sensitivity": 0.75,
+      "patience": 4,
+      "counter_strength": 0.5425000000000001,
+      "walkaway_threshold": 0.08,
+      "belief_obscurity": 0.45,
+      "brand_loyalty": 0.6100000000000001,
+      "impulsivity": 0.45,
+      "feature_weight_vector": {
+        "safety": 0.34113218442831367,
+        "comfort": 0.30051866398672056,
+        "performance": 0.08887239498625042,
+        "tech": 0.17389801270593508,
+        "aesthetics": 0.09557874389278037
+      }
+    }
+  },
+  {
+    "schema_version": "persona_v2",
+    "persona_id": "pb_s123_000036",
+    "split": "train",
+    "source": "distribution_hidden_mapping_v1",
+    "seed": 123,
+    "observable": {
+      "age_band": "36-50",
+      "income_band": "<60k",
+      "household_stage": "family",
+      "ownership_stage": "additional",
+      "primary_use_case": "family"
+    },
+    "hidden": {
+      "decision_style": "balanced",
+      "tech_affinity_band": "low",
+      "stated_priority_top2": [
+        "safety",
+        "tech"
+      ],
+      "reservation_price_base": 6029.201491120693,
+      "price_sensitivity": 0.95,
+      "aesthetic_sensitivity": 0.83,
+      "patience": 5,
+      "counter_strength": 0.505,
+      "walkaway_threshold": 0.175,
+      "belief_obscurity": 0.2,
+      "brand_loyalty": 0.33999999999999997,
+      "impulsivity": 0.2,
+      "feature_weight_vector": {
+        "safety": 0.3394206741758038,
+        "comfort": 0.24058109387384669,
+        "performance": 0.0895245669144224,
+        "tech": 0.21362838612420815,
+        "aesthetics": 0.11684527891171877
+      }
+    }
+  },
+  {
+    "schema_version": "persona_v2",
+    "persona_id": "pb_s123_000037",
+    "split": "train",
+    "source": "distribution_hidden_mapping_v1",
+    "seed": 123,
+    "observable": {
+      "age_band": "36-50",
+      "income_band": "60-100k",
+      "household_stage": "couple",
+      "ownership_stage": "replacement",
+      "primary_use_case": "luxury"
+    },
+    "hidden": {
+      "decision_style": "balanced",
+      "tech_affinity_band": "medium",
+      "stated_priority_top2": [
+        "comfort",
+        "safety"
+      ],
+      "reservation_price_base": 10051.619210794248,
+      "price_sensitivity": 0.7,
+      "aesthetic_sensitivity": 0.45,
+      "patience": 6,
+      "counter_strength": 0.755,
+      "walkaway_threshold": 0.0,
+      "belief_obscurity": 0.2,
+      "brand_loyalty": 0.69,
+      "impulsivity": 0.75,
+      "feature_weight_vector": {
+        "safety": 0.18670197809823622,
+        "comfort": 0.27485246771346244,
+        "performance": 0.1343728610488783,
+        "tech": 0.15570586989416255,
+        "aesthetics": 0.24836682324526052
+      }
+    }
+  },
+  {
+    "schema_version": "persona_v2",
+    "persona_id": "pb_s123_000038",
+    "split": "train",
+    "source": "distribution_hidden_mapping_v1",
+    "seed": 123,
+    "observable": {
+      "age_band": "26-35",
+      "income_band": "60-100k",
+      "household_stage": "couple",
+      "ownership_stage": "first_time",
+      "primary_use_case": "luxury"
+    },
+    "hidden": {
+      "decision_style": "expressive",
+      "tech_affinity_band": "high",
+      "stated_priority_top2": [
+        "tech",
+        "comfort"
+      ],
+      "reservation_price_base": 10971.076735720613,
+      "price_sensitivity": 0.82,
+      "aesthetic_sensitivity": 0.45,
+      "patience": 2,
+      "counter_strength": 0.7925000000000001,
+      "walkaway_threshold": 0.23199999999999998,
+      "belief_obscurity": 0.45,
+      "brand_loyalty": 0.5700000000000001,
+      "impulsivity": 0.45,
+      "feature_weight_vector": {
+        "safety": 0.07605663755401466,
+        "comfort": 0.24295319355100584,
+        "performance": 0.1615460269658463,
+        "tech": 0.21367521081003965,
+        "aesthetics": 0.3057689311190936
+      }
+    }
+  },
+  {
+    "schema_version": "persona_v2",
+    "persona_id": "pb_s123_000039",
+    "split": "train",
+    "source": "distribution_hidden_mapping_v1",
+    "seed": 123,
+    "observable": {
+      "age_band": "36-50",
+      "income_band": "180k+",
+      "household_stage": "single",
+      "ownership_stage": "replacement",
+      "primary_use_case": "mixed"
+    },
+    "hidden": {
+      "decision_style": "balanced",
+      "tech_affinity_band": "medium",
+      "stated_priority_top2": [
+        "safety",
+        "tech"
+      ],
+      "reservation_price_base": 18050.579660868487,
+      "price_sensitivity": 1.0,
+      "aesthetic_sensitivity": 0.45,
+      "patience": 4,
+      "counter_strength": 0.8300000000000001,
+      "walkaway_threshold": 0.11000000000000001,
+      "belief_obscurity": 0.7,
+      "brand_loyalty": 0.36,
+      "impulsivity": 0.45,
+      "feature_weight_vector": {
+        "safety": 0.24761800432763753,
+        "comfort": 0.21269427228792293,
+        "performance": 0.13962032754149648,
+        "tech": 0.21728441085558586,
+        "aesthetics": 0.1827829849873572
+      }
+    }
+  },
+  {
+    "schema_version": "persona_v2",
+    "persona_id": "pb_s123_000040",
+    "split": "test",
+    "source": "distribution_hidden_mapping_v1",
+    "seed": 123,
+    "observable": {
+      "age_band": "36-50",
+      "income_band": "100-180k",
+      "household_stage": "family",
+      "ownership_stage": "replacement",
+      "primary_use_case": "performance"
+    },
+    "hidden": {
+      "decision_style": "analytic",
+      "tech_affinity_band": "medium",
+      "stated_priority_top2": [
+        "aesthetics",
+        "comfort"
+      ],
+      "reservation_price_base": 14834.694502472981,
+      "price_sensitivity": 0.92,
+      "aesthetic_sensitivity": 0.75,
+      "patience": 6,
+      "counter_strength": 0.32999999999999996,
+      "walkaway_threshold": 0.0,
+      "belief_obscurity": 0.7,
+      "brand_loyalty": 0.6100000000000001,
+      "impulsivity": 0.45,
+      "feature_weight_vector": {
+        "safety": 0.1288011092321833,
+        "comfort": 0.18465017739251055,
+        "performance": 0.3458431808656398,
+        "tech": 0.1558969562997807,
+        "aesthetics": 0.18480857620988567
+      }
+    }
+  },
+  {
+    "schema_version": "persona_v2",
+    "persona_id": "pb_s123_000041",
+    "split": "train",
+    "source": "distribution_hidden_mapping_v1",
+    "seed": 123,
+    "observable": {
+      "age_band": "36-50",
+      "income_band": "60-100k",
+      "household_stage": "single",
+      "ownership_stage": "replacement",
+      "primary_use_case": "mixed"
+    },
+    "hidden": {
+      "decision_style": "balanced",
+      "tech_affinity_band": "medium",
+      "stated_priority_top2": [
+        "performance",
+        "aesthetics"
+      ],
+      "reservation_price_base": 10703.23935076441,
+      "price_sensitivity": 0.7,
+      "aesthetic_sensitivity": 0.45,
+      "patience": 7,
+      "counter_strength": 0.255,
+      "walkaway_threshold": 0.0,
+      "belief_obscurity": 0.2,
+      "brand_loyalty": 0.6100000000000001,
+      "impulsivity": 0.45,
+      "feature_weight_vector": {
+        "safety": 0.1808749980099638,
+        "comfort": 0.19111836337089685,
+        "performance": 0.16222496549591,
+        "tech": 0.21547485145733705,
+        "aesthetics": 0.2503068216658924
+      }
+    }
+  },
+  {
+    "schema_version": "persona_v2",
+    "persona_id": "pb_s123_000042",
+    "split": "train",
+    "source": "distribution_hidden_mapping_v1",
+    "seed": 123,
+    "observable": {
+      "age_band": "50+",
+      "income_band": "180k+",
+      "household_stage": "single",
+      "ownership_stage": "additional",
+      "primary_use_case": "family"
+    },
+    "hidden": {
+      "decision_style": "analytic",
+      "tech_affinity_band": "medium",
+      "stated_priority_top2": [
+        "safety",
+        "tech"
+      ],
+      "reservation_price_base": 20665.98447164876,
+      "price_sensitivity": 0.95,
+      "aesthetic_sensitivity": 1.1300000000000001,
+      "patience": 6,
+      "counter_strength": 0.5425000000000001,
+      "walkaway_threshold": 0.13499999999999998,
+      "belief_obscurity": 0.45,
+      "brand_loyalty": 0.5900000000000001,
+      "impulsivity": 0.45,
+      "feature_weight_vector": {
+        "safety": 0.3340857772682818,
+        "comfort": 0.2159461893619672,
+        "performance": 0.042204949337706126,
+        "tech": 0.2763046542730207,
+        "aesthetics": 0.1314584297590243
+      }
+    }
+  },
+  {
+    "schema_version": "persona_v2",
+    "persona_id": "pb_s123_000043",
+    "split": "train",
+    "source": "distribution_hidden_mapping_v1",
+    "seed": 123,
+    "observable": {
+      "age_band": "50+",
+      "income_band": "180k+",
+      "household_stage": "couple",
+      "ownership_stage": "first_time",
+      "primary_use_case": "commute"
+    },
+    "hidden": {
+      "decision_style": "expressive",
+      "tech_affinity_band": "low",
+      "stated_priority_top2": [
+        "price",
+        "comfort"
+      ],
+      "reservation_price_base": 17664.690601254504,
+      "price_sensitivity": 1.2400000000000002,
+      "aesthetic_sensitivity": 0.45,
+      "patience": 3,
+      "counter_strength": 0.255,
+      "walkaway_threshold": 0.23400000000000004,
+      "belief_obscurity": 0.2,
+      "brand_loyalty": 0.19999999999999998,
+      "impulsivity": 0.2,
+      "feature_weight_vector": {
+        "safety": 0.17510832362287304,
+        "comfort": 0.30453208579510566,
+        "performance": 0.09462707076970292,
+        "tech": 0.19413404774534707,
+        "aesthetics": 0.23159847206697148
+      }
+    }
+  },
+  {
+    "schema_version": "persona_v2",
+    "persona_id": "pb_s123_000044",
+    "split": "val",
+    "source": "distribution_hidden_mapping_v1",
+    "seed": 123,
+    "observable": {
+      "age_band": "36-50",
+      "income_band": "100-180k",
+      "household_stage": "couple",
+      "ownership_stage": "replacement",
+      "primary_use_case": "luxury"
+    },
+    "hidden": {
+      "decision_style": "balanced",
+      "tech_affinity_band": "medium",
+      "stated_priority_top2": [
+        "performance",
+        "aesthetics"
+      ],
+      "reservation_price_base": 14419.741020693382,
+      "price_sensitivity": 1.0,
+      "aesthetic_sensitivity": 0.75,
+      "patience": 6,
+      "counter_strength": 0.255,
+      "walkaway_threshold": 0.0,
+      "belief_obscurity": 0.2,
+      "brand_loyalty": 0.94,
+      "impulsivity": 0.2,
+      "feature_weight_vector": {
+        "safety": 0.12126639036011064,
+        "comfort": 0.19926780869740401,
+        "performance": 0.1652176787778799,
+        "tech": 0.17300355614764454,
+        "aesthetics": 0.3412445660169609
+      }
+    }
+  },
+  {
+    "schema_version": "persona_v2",
+    "persona_id": "pb_s123_000045",
+    "split": "train",
+    "source": "distribution_hidden_mapping_v1",
+    "seed": 123,
+    "observable": {
+      "age_band": "26-35",
+      "income_band": "180k+",
+      "household_stage": "single",
+      "ownership_stage": "first_time",
+      "primary_use_case": "mixed"
+    },
+    "hidden": {
+      "decision_style": "analytic",
+      "tech_affinity_band": "high",
+      "stated_priority_top2": [
+        "tech",
+        "comfort"
+      ],
+      "reservation_price_base": 17811.004509299655,
+      "price_sensitivity": 0.82,
+      "aesthetic_sensitivity": 1.05,
+      "patience": 5,
+      "counter_strength": 0.7925000000000001,
+      "walkaway_threshold": 0.112,
+      "belief_obscurity": 0.45,
+      "brand_loyalty": 0.24,
+      "impulsivity": 0.75,
+      "feature_weight_vector": {
+        "safety": 0.18821661888846067,
+        "comfort": 0.24978921523214026,
+        "performance": 0.12783158321605315,
+        "tech": 0.2866969296314484,
+        "aesthetics": 0.14746565303189746
+      }
+    }
+  },
+  {
+    "schema_version": "persona_v2",
+    "persona_id": "pb_s123_000046",
+    "split": "train",
+    "source": "distribution_hidden_mapping_v1",
+    "seed": 123,
+    "observable": {
+      "age_band": "50+",
+      "income_band": "180k+",
+      "household_stage": "single",
+      "ownership_stage": "additional",
+      "primary_use_case": "mixed"
+    },
+    "hidden": {
+      "decision_style": "balanced",
+      "tech_affinity_band": "medium",
+      "stated_priority_top2": [
+        "tech",
+        "comfort"
+      ],
+      "reservation_price_base": 18390.89795379786,
+      "price_sensitivity": 0.6499999999999999,
+      "aesthetic_sensitivity": 1.1300000000000001,
+      "patience": 4,
+      "counter_strength": 0.7925000000000001,
+      "walkaway_threshold": 0.05499999999999999,
+      "belief_obscurity": 0.45,
+      "brand_loyalty": 0.5900000000000001,
+      "impulsivity": 0.45,
+      "feature_weight_vector": {
+        "safety": 0.14287216175763978,
+        "comfort": 0.27798602703086095,
+        "performance": 0.12173422256221603,
+        "tech": 0.26835444560010735,
+        "aesthetics": 0.18905314304917592
+      }
+    }
+  },
+  {
+    "schema_version": "persona_v2",
+    "persona_id": "pb_s123_000047",
+    "split": "val",
+    "source": "distribution_hidden_mapping_v1",
+    "seed": 123,
+    "observable": {
+      "age_band": "50+",
+      "income_band": "180k+",
+      "household_stage": "family",
+      "ownership_stage": "replacement",
+      "primary_use_case": "mixed"
+    },
+    "hidden": {
+      "decision_style": "balanced",
+      "tech_affinity_band": "low",
+      "stated_priority_top2": [
+        "price",
+        "comfort"
+      ],
+      "reservation_price_base": 18623.683500113057,
+      "price_sensitivity": 1.12,
+      "aesthetic_sensitivity": 0.45,
+      "patience": 7,
+      "counter_strength": 0.2925,
+      "walkaway_threshold": 0.0,
+      "belief_obscurity": 0.45,
+      "brand_loyalty": 0.6100000000000001,
+      "impulsivity": 0.45,
+      "feature_weight_vector": {
+        "safety": 0.2245453939071144,
+        "comfort": 0.3185296550295085,
+        "performance": 0.09884458001875292,
+        "tech": 0.17548516738300474,
+        "aesthetics": 0.1825952036616195
+      }
+    }
+  },
+  {
+    "schema_version": "persona_v2",
+    "persona_id": "pb_s123_000048",
+    "split": "train",
+    "source": "distribution_hidden_mapping_v1",
+    "seed": 123,
+    "observable": {
+      "age_band": "50+",
+      "income_band": "60-100k",
+      "household_stage": "couple",
+      "ownership_stage": "replacement",
+      "primary_use_case": "mixed"
+    },
+    "hidden": {
+      "decision_style": "analytic",
+      "tech_affinity_band": "medium",
+      "stated_priority_top2": [
+        "performance",
+        "aesthetics"
+      ],
+      "reservation_price_base": 12821.149982703546,
+      "price_sensitivity": 0.7,
+      "aesthetic_sensitivity": 1.05,
+      "patience": 4,
+      "counter_strength": 0.5800000000000001,
+      "walkaway_threshold": 0.16,
+      "belief_obscurity": 0.7,
+      "brand_loyalty": 0.6100000000000001,
+      "impulsivity": 0.45,
+      "feature_weight_vector": {
+        "safety": 0.1912919006872488,
+        "comfort": 0.17142167514360376,
+        "performance": 0.17223707997868043,
+        "tech": 0.20788957180797737,
+        "aesthetics": 0.25715977238248955
+      }
+    }
+  },
+  {
+    "schema_version": "persona_v2",
+    "persona_id": "pb_s123_000049",
+    "split": "val",
+    "source": "distribution_hidden_mapping_v1",
+    "seed": 123,
+    "observable": {
+      "age_band": "36-50",
+      "income_band": "180k+",
+      "household_stage": "family",
+      "ownership_stage": "replacement",
+      "primary_use_case": "mixed"
+    },
+    "hidden": {
+      "decision_style": "analytic",
+      "tech_affinity_band": "medium",
+      "stated_priority_top2": [
+        "comfort",
+        "safety"
+      ],
+      "reservation_price_base": 19736.211480102338,
+      "price_sensitivity": 1.0,
+      "aesthetic_sensitivity": 0.75,
+      "patience": 6,
+      "counter_strength": 0.255,
+      "walkaway_threshold": 0.0,
+      "belief_obscurity": 0.2,
+      "brand_loyalty": 0.6100000000000001,
+      "impulsivity": 0.2,
+      "feature_weight_vector": {
+        "safety": 0.26468827754199675,
+        "comfort": 0.2638518387508263,
+        "performance": 0.11387269143007782,
+        "tech": 0.20653266570173456,
+        "aesthetics": 0.1510545265753647
+      }
+    }
+  }
+]

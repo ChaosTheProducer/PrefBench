@@ -1,0 +1,95 @@
+schema_version: us_buyer_distribution_v2
+market: US
+scope: new_vehicle_customization_buyers
+last_updated: "2026-02-13"
+source_document: "docs/reference/deep_research/Customized_data/US_Distribution.md"
+# Observable-profile probability table for the environment, calibrated from public U.S. buyer statistics and industry research with minor task-specific adjustments.
+
+notes:
+  - "This config defines observable-field priors only (Persona v2 observable space)."
+  - "Values are calibrated from the deep-research report and mapped to project-specific bins."
+  - "Joint behavior is approximated with lightweight conditional tables for reproducible offline sampling."
+
+sources:
+  - name: "U.S. Census Bureau ACS 2023"
+    used_for: ["age_structure", "income_distribution", "household_composition"]
+  - name: "FHWA NHTS 2022"
+    used_for: ["trip_purpose", "mobility_use_case_mapping"]
+  - name: "Pew Research 2024/2025"
+    used_for: ["tech context for later hidden mapping"]
+  - name: "Industry summary in US_Distribution.md"
+    used_for: ["new-car buyer skew toward higher income"]
+
+observable_priors:
+  age_band:
+    values: ["18-25", "26-35", "36-50", "50+"]
+    probs: [0.08, 0.24, 0.39, 0.29]
+    rationale:
+      - "Mapped from ACS driving-age cohorts, then reweighted toward prime buying ages for new-vehicle purchases."
+
+  income_band:
+    values: ["<60k", "60-100k", "100-180k", "180k+"]
+    probs: [0.08, 0.22, 0.40, 0.30]
+    rationale:
+      - "General-population income shares are adjusted to new-vehicle buyer mix."
+      - "Calibrated to keep high-income buyer concentration consistent with report direction (~top-income dominance)."
+
+  household_stage:
+    values: ["single", "couple", "family"]
+    probs: [0.27, 0.31, 0.42]
+    rationale:
+      - "Mapped from ACS household composition: single-person, couple/no-children, and family-with-dependents structures."
+
+  ownership_stage:
+    values: ["first_time", "replacement", "additional"]
+    probs: [0.15, 0.68, 0.17]
+    rationale:
+      - "No direct public table in source report; set as explicit modeling assumption for new-vehicle market behavior."
+
+  primary_use_case:
+    values: ["commute", "family", "luxury", "performance", "mixed"]
+    probs: [0.19, 0.22, 0.14, 0.10, 0.35]
+    rationale:
+      - "Mapped from NHTS trip-purpose distribution and report-level lifestyle interpretation."
+
+joint_approximation:
+# Approximate joint distribution captured with conditional tables to preserve key dependencies while keeping sampling efficient and interpretable.
+  sampling_order:
+    - "sample age_band"
+    - "sample income_band | age_band"
+    - "sample household_stage | age_band"
+    - "sample ownership_stage | age_band"
+    - "sample primary_use_case | household_stage"
+
+  conditionals:
+    income_band_given_age_band:
+    # Sample an age band first, then sample the income band from the corresponding conditional row.
+      "18-25": [0.42, 0.36, 0.17, 0.05]
+      "26-35": [0.14, 0.33, 0.34, 0.19]
+      "36-50": [0.05, 0.20, 0.43, 0.32]
+      "50+": [0.06, 0.18, 0.40, 0.36]
+
+    household_stage_given_age_band:
+    # After age is sampled, draw household stage (single, couple, family).
+      "18-25": [0.56, 0.25, 0.19]
+      "26-35": [0.32, 0.31, 0.37]
+      "36-50": [0.17, 0.29, 0.54]
+      "50+": [0.34, 0.46, 0.20]
+
+    ownership_stage_given_age_band:
+    # After age is sampled, draw ownership stage (first-time, replacement, additional).
+      "18-25": [0.52, 0.42, 0.06]
+      "26-35": [0.21, 0.65, 0.14]
+      "36-50": [0.08, 0.70, 0.22]
+      "50+": [0.03, 0.72, 0.25]
+
+    primary_use_case_given_household_stage:
+    # After household stage is sampled, draw primary use case (commute, family, luxury, performance, mixed).
+      single: [0.30, 0.08, 0.17, 0.10, 0.35]
+      couple: [0.20, 0.14, 0.18, 0.11, 0.37]
+      family: [0.12, 0.43, 0.08, 0.06, 0.31]
+
+quality_checks:
+  - "Each probs vector must sum to 1.0 (within floating tolerance)."
+  - "`observable_priors` key order and category labels must match Persona v2 schema."
+  - "Post-generation diagnostics should verify diversity and train/val/test split disjointness."

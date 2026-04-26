@@ -1,0 +1,232 @@
+schema_version: persona_hidden_mapping_v1
+market: US
+scope: persona_v2_hidden_generation
+last_updated: "2026-02-13"
+source_document: "docs/reference/deep_research/Customized_data/US_Distribution.md"
+
+notes:
+  - "This config defines hidden-field conditional generation and coupling rules."
+  - "Observe fields are sampled from `configs/us_buyer_distribution_v2.yaml` and then mapped to hidden fields."
+# Conditional generation and coupling rules for hidden persona fields.
+
+hidden_conditionals:
+# Conditional distributions for hidden fields given observable profile values.
+  decision_style_global:
+    values: ["analytic", "balanced", "expressive"]
+    probs: [0.31, 0.44, 0.25]
+
+  tech_affinity_band_global:
+    values: ["low", "medium", "high"]
+    probs: [0.22, 0.50, 0.28]
+
+  stated_priority_top2_global:
+    values:
+      - ["price", "comfort"]
+      - ["comfort", "safety"]
+      - ["performance", "aesthetics"]
+      - ["tech", "comfort"]
+      - ["safety", "tech"]
+      - ["aesthetics", "comfort"]
+    probs: [0.20, 0.22, 0.13, 0.17, 0.16, 0.12]
+
+  decision_style_given_primary_use_case:
+  # Adjust the decision-style distribution by primary use case.
+    commute:
+      values: ["analytic", "balanced", "expressive"]
+      probs: [0.46, 0.44, 0.10]
+    family:
+      values: ["analytic", "balanced", "expressive"]
+      probs: [0.40, 0.50, 0.10]
+    luxury:
+      values: ["analytic", "balanced", "expressive"]
+      probs: [0.24, 0.46, 0.30]
+    performance:
+      values: ["analytic", "balanced", "expressive"]
+      probs: [0.26, 0.34, 0.40]
+    mixed:
+      values: ["analytic", "balanced", "expressive"]
+      probs: [0.31, 0.44, 0.25]
+
+  tech_affinity_band_given_age_band:
+  # Adjust the tech-affinity distribution by age band.
+    "18-25":
+      values: ["low", "medium", "high"]
+      probs: [0.10, 0.36, 0.54]
+    "26-35":
+      values: ["low", "medium", "high"]
+      probs: [0.12, 0.43, 0.45]
+    "36-50":
+      values: ["low", "medium", "high"]
+      probs: [0.19, 0.51, 0.30]
+    "50+":
+      values: ["low", "medium", "high"]
+      probs: [0.33, 0.50, 0.17]
+
+  stated_priority_top2_given_primary_use_case:
+  # Adjust the top preference combination by primary use case.
+    commute:
+      values:
+        - ["price", "comfort"]
+        - ["comfort", "safety"]
+        - ["tech", "comfort"]
+        - ["safety", "tech"]
+        - ["aesthetics", "comfort"]
+      probs: [0.30, 0.24, 0.18, 0.18, 0.10]
+    family:
+      values:
+        - ["comfort", "safety"]
+        - ["safety", "tech"]
+        - ["price", "comfort"]
+        - ["tech", "comfort"]
+      probs: [0.35, 0.32, 0.23, 0.10]
+    luxury:
+      values:
+        - ["aesthetics", "comfort"]
+        - ["tech", "comfort"]
+        - ["performance", "aesthetics"]
+        - ["comfort", "safety"]
+      probs: [0.34, 0.30, 0.24, 0.12]
+    performance:
+      values:
+        - ["performance", "aesthetics"]
+        - ["tech", "comfort"]
+        - ["aesthetics", "comfort"]
+        - ["price", "comfort"]
+      probs: [0.50, 0.20, 0.18, 0.12]
+    mixed:
+      values:
+        - ["price", "comfort"]
+        - ["comfort", "safety"]
+        - ["performance", "aesthetics"]
+        - ["tech", "comfort"]
+        - ["safety", "tech"]
+        - ["aesthetics", "comfort"]
+      probs: [0.20, 0.22, 0.13, 0.17, 0.16, 0.12]
+
+numeric_mixtures:
+  price_sensitivity:
+    values: [0.70, 1.00, 1.35]
+    probs: [0.28, 0.50, 0.22]
+  aesthetic_sensitivity:
+    values: [0.45, 0.75, 1.05]
+    probs: [0.24, 0.52, 0.24]
+  patience:
+    values: [3, 4, 5, 6]
+    probs: [0.20, 0.34, 0.30, 0.16]
+  counter_strength:
+    values: [0.30, 0.55, 0.80]
+    probs: [0.30, 0.48, 0.22]
+  walkaway_threshold:
+    values: [0.05, 0.10, 0.18]
+    probs: [0.42, 0.40, 0.18]
+  belief_obscurity:
+    values: [0.20, 0.45, 0.70]
+    probs: [0.30, 0.50, 0.20]
+  brand_loyalty:
+    values: [0.30, 0.55, 0.80]
+    probs: [0.24, 0.52, 0.24]
+  impulsivity:
+    values: [0.20, 0.45, 0.75]
+    probs: [0.30, 0.48, 0.22]
+
+reservation_price_base_by_income:
+  "<60k":
+    mean: 6800
+    std: 850
+  "60-100k":
+    mean: 9200
+    std: 1100
+  "100-180k":
+    mean: 12800
+    std: 1400
+  "180k+":
+    mean: 17200
+    std: 1700
+
+feature_weight_templates:
+  commute:
+    safety: 0.20
+    comfort: 0.28
+    performance: 0.10
+    tech: 0.22
+    aesthetics: 0.20
+  family:
+    safety: 0.30
+    comfort: 0.28
+    performance: 0.08
+    tech: 0.18
+    aesthetics: 0.16
+  luxury:
+    safety: 0.15
+    comfort: 0.24
+    performance: 0.12
+    tech: 0.20
+    aesthetics: 0.29
+  performance:
+    safety: 0.12
+    comfort: 0.16
+    performance: 0.42
+    tech: 0.16
+    aesthetics: 0.14
+  mixed:
+    safety: 0.20
+    comfort: 0.23
+    performance: 0.16
+    tech: 0.21
+    aesthetics: 0.20
+
+conditional_shifts:
+  by_primary_use_case:
+    luxury:
+      brand_loyalty: 0.08
+    performance:
+      price_sensitivity: -0.08
+
+  by_ownership_stage:
+    first_time:
+      price_sensitivity: 0.12
+      brand_loyalty: -0.10
+      walkaway_threshold: 0.08
+      patience: -1
+    replacement:
+      brand_loyalty: 0.06
+      walkaway_threshold: -0.03
+      patience: 1
+    additional:
+      price_sensitivity: -0.05
+      aesthetic_sensitivity: 0.08
+      brand_loyalty: 0.04
+
+  by_tech_affinity_band:
+    high:
+      brand_loyalty: 0.04
+
+  by_priority_contains:
+    price:
+      price_sensitivity: 0.12
+
+hidden_coupling:
+  reservation_price_base_from_price_sensitivity:
+    base: 1.08
+    slope: -0.18
+    min: 0.75
+    max: 1.20
+  walkaway_from_price_sensitivity:
+    slope: 0.10
+    center: 1.00
+  walkaway_from_patience:
+    slope: -0.04
+    center: 5
+  counter_strength_from_belief_obscurity:
+    slope: 0.15
+    center: 0.50
+
+bounds:
+  price_sensitivity: [0.50, 1.75]
+  aesthetic_sensitivity: [0.000001, 2.00]
+  patience: [1, 8]
+  counter_strength: [0.00, 1.00]
+  walkaway_threshold: [0.00, 1.00]
+  belief_obscurity: [0.00, 1.00]
+  brand_loyalty: [0.00, 1.00]
+  impulsivity: [0.00, 1.00]

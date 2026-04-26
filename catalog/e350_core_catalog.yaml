@@ -1,0 +1,93 @@
+vehicle:
+  brand: Mercedes-Benz
+  model: E350 Sedan
+  market: US
+
+options:
+  - key: paint_color.paint_standard
+    dimension: paint_color
+    price_delta_usd: 0
+    aesthetic_weight: 0.2
+  - key: paint_color.paint_metallic
+    dimension: paint_color
+    price_delta_usd: 750
+    aesthetic_weight: 0.45
+  - key: paint_color.paint_manufaktur
+    dimension: paint_color
+    price_delta_usd: 1750
+    aesthetic_weight: 0.8
+
+  - key: wheels.wheel_18_standard
+    dimension: wheels
+    price_delta_usd: 0
+    aesthetic_weight: 0.2
+  - key: wheels.wheel_19_upgrade
+    dimension: wheels
+    price_delta_usd: 600
+    aesthetic_weight: 0.5
+  - key: wheels.wheel_amg_high
+    dimension: wheels
+    price_delta_usd: 1950
+    aesthetic_weight: 0.85
+
+  - key: exterior_style.styling_upgrade
+    dimension: exterior_style
+    price_delta_usd: 400
+    aesthetic_weight: 0.55
+
+  - key: upholstery.mb_tex
+    dimension: upholstery
+    price_delta_usd: 0
+    aesthetic_weight: 0.25
+  - key: upholstery.leather
+    dimension: upholstery
+    price_delta_usd: 1620
+    aesthetic_weight: 0.65
+  - key: upholstery.nappa_leather
+    dimension: upholstery
+    price_delta_usd: 2990
+    aesthetic_weight: 0.9
+
+  - key: trim.standard_trim
+    dimension: trim
+    price_delta_usd: 0
+    aesthetic_weight: 0.25
+  - key: trim.premium_trim
+    dimension: trim
+    price_delta_usd: 150
+    aesthetic_weight: 0.55
+
+  - key: comfort.multicontour_package
+    dimension: comfort
+    price_delta_usd: 2950
+    aesthetic_weight: 0.85
+  - key: comfort.seat_comfort_upgrade
+    dimension: comfort
+    price_delta_usd: 500
+    aesthetic_weight: 0.45
+  - key: comfort.soft_close_doors
+    dimension: comfort
+    price_delta_usd: 550
+    aesthetic_weight: 0.4
+
+  - key: audio.burmester_4d
+    dimension: audio
+    price_delta_usd: 1030
+    aesthetic_weight: 0.7
+
+  - key: technology.mbux_superscreen
+    dimension: technology
+    price_delta_usd: 1500
+    aesthetic_weight: 0.9
+  - key: safety.driver_assistance_package
+    dimension: safety
+    price_delta_usd: 1950
+    aesthetic_weight: 0.6
+  - key: performance.airmatic_package
+    dimension: performance
+    price_delta_usd: 3200
+    aesthetic_weight: 0.65
+  - key: lighting.digital_light
+    dimension: lighting
+    price_delta_usd: 990
+    aesthetic_weight: 0.6

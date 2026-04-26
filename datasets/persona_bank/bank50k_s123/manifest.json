@@ -1,0 +1,45 @@
+{
+  "count_total": 50000,
+  "counts_by_split": {
+    "test": 7500,
+    "train": 35000,
+    "val": 7500
+  },
+  "files": {
+    "combined": {
+      "path": "/home/chacelei/ABDN/Research-Dynamic-Pricing/datasets/persona_bank/bank50k_s123/persona_bank.jsonl",
+      "sha256": "fa0b438a5f4bf447f839da97e4b0017423e23aa2c163a351d3f562f7796786e4"
+    },
+    "preview": {
+      "count": 50,
+      "path": "/home/chacelei/ABDN/Research-Dynamic-Pricing/datasets/persona_bank/bank50k_s123/persona_bank_preview.json",
+      "sha256": "1955f9865e55f3531a54b9b70ca04caf140bc91fe9091d93a63989730a5892f7"
+    },
+    "test": {
+      "path": "/home/chacelei/ABDN/Research-Dynamic-Pricing/datasets/persona_bank/bank50k_s123/test.jsonl",
+      "sha256": "2646ee2a83a00e67025f598e869bf6ecf7f6be0cf9ed3b3cafc3abf93d847e62"
+    },
+    "train": {
+      "path": "/home/chacelei/ABDN/Research-Dynamic-Pricing/datasets/persona_bank/bank50k_s123/train.jsonl",
+      "sha256": "51960a530421845ab6a7f809e5b4b88bd48e9b4647a6e938e999ba5f6ec09faa"
+    },
+    "val": {
+      "path": "/home/chacelei/ABDN/Research-Dynamic-Pricing/datasets/persona_bank/bank50k_s123/val.jsonl",
+      "sha256": "6a2a62c0b49195afffd3d66d484ec76f264f5df9bcee5a68e80cb13ad735a941"
+    }
+  },
+  "output_dir": "/home/chacelei/ABDN/Research-Dynamic-Pricing/datasets/persona_bank/bank50k_s123",
+  "persona_config_path": "/home/chacelei/ABDN/Research-Dynamic-Pricing/configs/personas_v2.yaml",
+  "schema_version": "persona_v2",
+  "seed": 123,
+  "source_tag": "distribution_hidden_mapping_v1",
+  "split_method": "stratified",
+  "status": "ok",
+  "stratify_fields": [
+    "age_band",
+    "income_band"
+  ],
+  "test_ratio": 0.15000000000000005,
+  "train_ratio": 0.7,
+  "val_ratio": 0.15
+}

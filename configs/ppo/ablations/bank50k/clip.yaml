@@ -1,0 +1,47 @@
+schema_version: ppo_config_v1
+defaults:
+  run_name: ppo_bank50k_clip
+  output_root: artifacts/ppo/ablations/bank50k/clip
+paths:
+  catalog_path: catalog/e350_core_catalog.yaml
+  persona_config_path: configs/personas_v2.yaml
+  persona_bank_path: datasets/persona_bank/bank50k_s123/persona_bank.jsonl
+clip:
+  enabled: true
+  semantic_path: datasets/clip_semantics/e350_clip_text_v1.json
+  legacy_proxy_enabled: true
+environment:
+  price_bin_count: 301
+  price_step_usd: 20.0
+  reward_scale_usd: 1000.0
+  no_deal_penalty: 0.0
+  profit_target_usd: 0.0
+  low_profit_penalty: 0.0
+  no_deal_requires_positive_margin: true
+  invalid_accept_penalty: 0.0
+  initial_offer_markup: 1.4
+train:
+  timesteps: 600000
+  persona_bank_split: train
+  n_envs: 4
+  n_steps: 256
+  console_log_freq: 2000
+  batch_size: 512
+  learning_rate: 0.0002
+  gamma: 0.99
+  gae_lambda: 0.95
+  ent_coef: 0.002
+  clip_range: 0.2
+eval:
+  episodes: 5000
+  persona_bank_split: val
+  deterministic: false
+benchmark:
+  episodes: 5000
+  persona_bank_split: test
+  policies:
+  - random
+  - concession
+  - ppo
+  deterministic: false
+  allow_consumer_mismatch: false
