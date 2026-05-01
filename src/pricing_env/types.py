@@ -14,7 +14,7 @@ class CatalogOption:
         key: Stable option identifier.
         dimension: Logical dimension group.
         price_delta_usd: MSRP delta relative to base vehicle.
-        aesthetic_weight: Scalar proxy used before CLIP embedding integration.
+        aesthetic_weight: Scalar aesthetics proxy used by the simulator.
     """
 
     key: str

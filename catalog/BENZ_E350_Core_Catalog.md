@@ -1,7 +1,7 @@
 # Mercedes-Benz E350 Core Catalog (Filtered)
 
 ## Purpose
-This file is a reduced customization catalog for RL environment design.
+This file is a reduced customization catalog for benchmark environment design.
 It keeps only representative high-impact options and merges near-duplicate variants to control state-space growth.
 
 ## Vehicle Scope
@@ -60,13 +60,3 @@ It keeps only representative high-impact options and merges near-duplicate varia
 ## Duplicate Handling
 - `Burmester 4D Surround Sound` appears in multiple sections in source notes.
 - Keep one canonical definition under `audio.burmester_4d`.
-
-## CLIP Text-Only Semantics (Starter Prompts)
-| option_key | clip_prompt_en |
-|---|---|
-| paint_color.paint_manufaktur | ultra-premium exterior paint finish, exclusive luxury, high visual prestige |
-| paint_color.paint_metallic | metallic premium paint finish, refined modern styling |
-| wheels.wheel_amg_high | large AMG performance wheels, aggressive sporty luxury styling |
-| upholstery.nappa_leather | ultra-soft premium nappa leather interior, handcrafted luxury comfort |
-| safety.driver_assistance_package | advanced driver assistance and semi-autonomous safety technology |
-| technology.mbux_superscreen | futuristic multi-screen cockpit, high-tech digital interior experience |

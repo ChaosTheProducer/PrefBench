@@ -1,0 +1,11 @@
+\section{Related Work}
+\label{sec:related_work}
+
+\paragraph{Dynamic and personalized pricing.}
+Dynamic pricing has been studied through contextual pricing, demand estimation, and learning-based price adjustment \citep{choi2023SemiParametricContextualPricing,liu2021DynamicPricingEcommerce,pandey2020DeepReinforcementLearning}. Personalized pricing additionally raises questions about consumer heterogeneity, fairness perception, and how individual or segment-level information should be used \citep{biggs2021ModelDistillationRevenue,dube2017PersonalizedPricingConsumer,priester2020SpecialPriceJust}. PrefBench differs from this line by focusing on a controlled benchmark setting with latent buyer traits and multi-round negotiation, rather than on a deployable pricing model or a single empirical market.
+
+\paragraph{Negotiation agents and environments.}
+Automated negotiation has a long history in multi-agent systems, including shared platforms and competitions such as ANAC and Genius \citep{baarslag2012FirstAutomatedNegotiating,lin2014GeniusIntegratedEnvironment}. NegMAS provides another research-oriented framework for constructing negotiation simulations \citep{mohammad2021NegMASPlatformAutomated}. More recent work has also evaluated bargaining abilities in language models \citep{xia2024MeasuringBargainingAbilities,chan2024NegotiationToMBenchmarkStresstesting}. PrefBench is related to these efforts, but its task is seller-side personalized pricing over configurable product features, with explicit profit, deal, and walkaway metrics.
+
+\paragraph{Simulation benchmarks and research environments.}
+Standardized simulator environments are useful when real interaction data are costly, sensitive, or difficult to control. Synthetic or simulator-based benchmarks are used in retail and pricing simulation settings \citep{xia2023RetailSynthSyntheticData,villarrubia-martin2025DynamicPricingHighSpeed}. PrefBench follows this simulator-based tradition while making its assumptions explicit: observable buyer profiles and hidden preference variables are generated under a controlled semi-synthetic process, and the current release is positioned as a benchmark prototype rather than a complete real-market substitute.

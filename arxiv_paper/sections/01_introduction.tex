@@ -1,0 +1,18 @@
+\section{Introduction}
+\label{sec:introduction}
+
+Personalized pricing is a common decision problem in settings where a seller offers configurable products to buyers with heterogeneous preferences. A buyer may value the same bundle differently depending on budget, use case, feature priorities, and willingness to negotiate. This makes pricing more than a one-shot demand-estimation problem: the seller must decide how aggressively to price while observing only partial evidence about the buyer's latent preferences.
+
+This report studies personalized pricing through a controlled benchmark prototype. The concrete substrate is customized vehicle-feature pricing, where a seller negotiates over a fixed feature bundle. The domain is useful because it combines feature-level value, implementation cost, buyer heterogeneity, and multi-round negotiation. However, the intended benchmark question is broader than vehicle customization: how should pricing agents be evaluated when buyer preferences are hidden and can only be inferred through interaction?
+
+PrefBench is positioned between dynamic pricing, negotiation environments, and agent benchmark design. It provides a simulator-based benchmark for seller-side pricing decisions in a structured negotiation setting, with fixed assets, fixed persona splits, and shared evaluation metrics.
+
+The contribution of this report is intentionally scoped. We release and document a working benchmark prototype rather than claiming a complete benchmark suite. The prototype includes a product catalog, persona generation pipeline, frozen persona bank, multi-round negotiation environment, and baseline evaluation protocol. We also outline how the benchmark can be extended to LLM agents, belief probing, robustness evaluation, and human reference studies.
+
+The main contributions are:
+\begin{itemize}
+  \item We define a simulator-based benchmark prototype for personalized pricing and negotiation under hidden buyer preferences.
+  \item We implement a reproducible environment with a structured catalog, semi-synthetic buyer personas, fixed data splits, and shared episode-level metrics.
+  \item We report checkpoint-free heuristic baseline results under a common evaluation protocol and define the next LLM-facing evaluation path.
+  \item We document the limitations of the current prototype and identify concrete future extensions for LLM-facing evaluation, belief probing, robustness testing, and human reference comparison.
+\end{itemize}

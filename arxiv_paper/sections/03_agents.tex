@@ -1,0 +1,13 @@
+\section{Baseline Agents}
+\label{sec:agents}
+
+The prototype currently includes checkpoint-free heuristic baselines. Their role is not to solve the pricing problem, but to provide interpretable anchors for the benchmark before adding zero-shot LLM agents.
+
+\paragraph{Random policy.}
+The random policy samples offer prices from a fixed feasible range, occasionally accepts a buyer counter-offer, and occasionally walks away. It serves as a sanity baseline for checking whether the environment rewards meaningful pricing behavior.
+
+\paragraph{Concession policy.}
+The concession policy starts from a high-margin offer and lowers its target price as the negotiation progresses. When a buyer counter-offer is available, it partially adapts toward that counter-offer while preserving a minimum margin. This policy is intentionally simple and inspectable, making it a useful reference for future LLM baselines.
+
+\paragraph{LLM-facing extension.}
+The current report does not yet include a broad LLM-agent study. The planned extension is a natural-language observation renderer with a structured JSON action schema, so zero-shot LLM agents can participate under the same simulator contract as the heuristic policies. Prompt optimization, fine-tuning, and large-scale model leaderboards are left to future work.

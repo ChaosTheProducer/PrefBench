@@ -5,10 +5,11 @@ repository. The repository includes both code work and research writing work.
 
 ## Project Identity
 
-- Treat this repository as the benchmark-v1 baseline for customized
-  car-feature pricing under partial observability.
+- Treat this repository as the PrefBench prototype for personalized pricing
+  agents under hidden buyer preferences.
 - Preserve reproducibility and benchmark comparability by default.
-- Do not treat the repository as an open-ended sandbox for arbitrary RL tuning.
+- Do not treat the repository as an open-ended sandbox for arbitrary algorithm
+  tuning.
 
 ## Frozen Vs. Extensible
 
@@ -16,8 +17,8 @@ The following should be treated as frozen unless there is a clear critical bug:
 
 - `catalog/`
 - `datasets/`
-- benchmark-v1 environment contract
-- retained thesis-stage benchmark configs used for reported results
+- simulator environment contract
+- fixed persona-bank and split definitions
 
 Extensions are allowed when they are added as new layers without silently
 changing the v1 baseline. Preferred extension directions include:
@@ -78,9 +79,8 @@ versioned locations instead of overwriting v1 assets.
 - Do not claim features, diagnostics, or guarantees that are not present.
 - Do not invent citations, results, or implementation details.
 - Keep terminology stable across code and writing. Important terms include:
-  - benchmark v1
-  - benchmark v2
-  - partial observability
+  - PrefBench
+  - hidden buyer preferences
   - belief probing
   - robustness / OOD
   - LLM-compatible interface
@@ -147,8 +147,7 @@ High-value work for this repository or its direct successor is:
 
 Lower-value work by default is:
 
-- endless PPO tuning
-- endless Dreamer tuning
+- algorithm tuning without benchmark value
 - reward-engineering churn without benchmark value
 - cosmetic presentation changes without scientific gain
 
