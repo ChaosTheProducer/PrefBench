@@ -15,10 +15,18 @@ env/
 .env
 .env.*
 
+# Local API credentials
+configs/llm_api*.json
+!configs/llm_api.example.json
+
 # Local editor / agent state
 .vscode/
 .idea/
 .codex
+Agents.md
+
+# Local paper drafts
+arxiv_paper/
 
 # Experiment outputs and model artifacts
 outputs/
