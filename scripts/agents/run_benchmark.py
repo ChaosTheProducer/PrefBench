@@ -39,6 +39,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--policies", type=str, default="random,concession")
     parser.add_argument("--run-name", type=str, default="heuristic_test")
     parser.add_argument("--report-out", type=Path, default=DEFAULT_REPORT_OUT)
+    parser.add_argument("--episodes-out", type=Path, default=None)
     return parser.parse_args()
 
 
@@ -143,6 +144,7 @@ def _run_policy(
 
     acc = _new_metric()
     episode_keys: List[Dict[str, Any]] = []
+    episode_results: List[Dict[str, Any]] = []
     for ep_seed in episode_seeds:
         env.rng.seed(int(ep_seed))
         observation = env.reset()
@@ -166,11 +168,28 @@ def _run_policy(
         acc["walkaway_count"] += float(bool(metrics.get("walkaway", False)))
         acc["total_trace_len"] += float(info.get("trace_len", 0))
         acc["total_env_reward"] += total_reward
+        episode_results.append(
+            {
+                "policy": policy_name,
+                "episode_idx": len(episode_results),
+                "episode_seed": int(ep_seed),
+                "persona": {
+                    "persona_id": str(initial_info.get("persona_id", "")),
+                    "persona_source": str(initial_info.get("persona_source", "")),
+                    "persona_split": str(initial_info.get("persona_split", "")),
+                },
+                "selected_option_keys": list(initial_info["initial_observation"].get("selected_option_keys", [])),
+                "metrics": metrics,
+                "total_env_reward": float(total_reward),
+                "trace_len": int(info.get("trace_len", 0)),
+            }
+        )
 
     return {
         "policy": policy_name,
         "metrics": _finalize_metric(acc),
         "episode_keys": episode_keys,
+        "episodes": episode_results,
     }
 
 
@@ -192,6 +211,15 @@ def _assert_same_episodes(policy_results: Mapping[str, Dict[str, Any]]) -> bool:
     return True
 
 
+def _write_jsonl(path: Path, rows: Sequence[Mapping[str, Any]]) -> None:
+    """Writes records as JSONL."""
+
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with path.open("w") as handle:
+        for row in rows:
+            handle.write(json.dumps(row, sort_keys=True) + "\n")
+
+
 def main() -> None:
     """Runs the benchmark and writes a JSON report."""
 
@@ -200,6 +228,7 @@ def main() -> None:
     args.persona_config_path = _resolve_repo_path(args.persona_config_path)
     args.persona_bank_path = _resolve_repo_path(args.persona_bank_path)
     args.report_out = _resolve_repo_path(args.report_out)
+    args.episodes_out = _resolve_repo_path(args.episodes_out) if args.episodes_out is not None else None
 
     if int(args.episodes) <= 0:
         raise ValueError("`episodes` must be positive.")
@@ -228,10 +257,14 @@ def main() -> None:
         "persona_bank_split": str(args.persona_bank_split),
         "policies": policies,
         "same_episodes_verified": bool(same_episodes),
+        "episodes_out": str(args.episodes_out) if args.episodes_out is not None else None,
         "results": {name: payload["metrics"] for name, payload in policy_results.items()},
     }
     args.report_out.parent.mkdir(parents=True, exist_ok=True)
     args.report_out.write_text(json.dumps(report, indent=2, sort_keys=True))
+    if args.episodes_out is not None:
+        rows = [row for name in policies for row in policy_results[name]["episodes"]]
+        _write_jsonl(args.episodes_out, rows)
     print(json.dumps(report, indent=2, sort_keys=True))
 
 

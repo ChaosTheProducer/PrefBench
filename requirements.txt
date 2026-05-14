@@ -2,5 +2,8 @@
 PyYAML>=6.0
 negmas>=0.10
 
+# Analysis
+numpy>=1.26
+
 # Testing
 pytest>=8.0

@@ -28,6 +28,10 @@ Agents.md
 # Local paper drafts
 arxiv_paper/
 
+# Local documentation and tests not included in public release
+docs/
+tests/
+
 # Experiment outputs and model artifacts
 outputs/
 runs/
