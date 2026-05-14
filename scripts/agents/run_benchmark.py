@@ -22,7 +22,7 @@ from pricing_env.negotiation_env import NegotiationEnv
 
 DEFAULT_CATALOG_PATH = ROOT / "catalog" / "e350_core_catalog.yaml"
 DEFAULT_PERSONA_CONFIG_PATH = ROOT / "configs" / "personas_v2.yaml"
-DEFAULT_PERSONA_BANK_PATH = ROOT / "datasets" / "persona_bank" / "bank50k_s123" / "persona_bank.jsonl"
+DEFAULT_PERSONA_BANK_PATH = ROOT / "datasets" / "persona_bank" / "bank50k_s123" / "test.jsonl"
 DEFAULT_REPORT_OUT = ROOT / "artifacts" / "heuristic" / "benchmark_test.json"
 
 

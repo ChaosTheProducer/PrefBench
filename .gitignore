@@ -32,6 +32,11 @@ arxiv_paper/
 docs/
 tests/
 
+# Large local persona-bank files not required for public LLM evaluation
+datasets/persona_bank/bank50k_s123/persona_bank.jsonl
+datasets/persona_bank/bank50k_s123/train.jsonl
+datasets/persona_bank/bank50k_s123/val.jsonl
+
 # Experiment outputs and model artifacts
 outputs/
 runs/

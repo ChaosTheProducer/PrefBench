@@ -1,105 +1,104 @@
 # PrefBench
 
-PrefBench is a simulator-based benchmark prototype for personalized pricing agents under hidden buyer preferences. The benchmark models a seller negotiating over a fixed configurable product bundle with heterogeneous consumer personas, then evaluates policies under shared seeds and shared episode contracts.
+PrefBench is a simulator-based benchmark for evaluating seller-side agents in hidden-preference personalized pricing negotiations. A seller must price a customized product bundle while observing only a partial state summary of the buyer. The benchmark separates three capabilities that are often conflated in LLM-agent evaluation: producing valid structured actions, reaching agreements, and making profit-sensitive pricing decisions when buyer preferences are not directly observable.
 
-The current repository is scoped to a clean arXiv artifact centered on checkpoint-free heuristic baselines and a zero-shot LLM agent interface. The previous thesis-stage PPO, Dreamer, TTA, Gymnasium, and CLIP-semantics code has been removed from this repository to keep the release focused.
+This repository provides the code and data artifacts for PrefBench, including the negotiation simulator, a fixed vehicle-customization catalog, deterministic persona splits, heuristic baselines, OpenAI-compatible LLM runners, and evaluation scripts used to produce the benchmark metrics shown below.
 
-## Overview
+![PrefBench LLM evaluation loop](assets/figures/llm_protocol_architecture.svg)
 
-PrefBench contains two main components:
+## Benchmark Setting
 
-- **Consumer simulator**: samples structured buyer personas with observable fields and hidden behavioral variables, then uses a utility-driven negotiation backend to respond to seller actions.
-- **Pricing agents**: currently includes random and concession-style heuristic policies plus a zero-shot LLM policy wrapper with a natural-language observation and structured JSON action schema.
+PrefBench defines a controlled negotiation environment with four main components:
 
-The current benchmark uses a Mercedes-Benz E350 customization catalog as a fixed product substrate. Each episode samples one customization bundle, then runs a bounded multi-round price negotiation. The seller sees only observable profile/context information and negotiation history; latent willingness-to-pay and hidden behavioral traits remain inside the simulator.
+- **Hidden-preference buyers.** Each episode is grounded in observable buyer attributes and simulator-private variables such as willingness to pay, preference weights, patience, and counter-offer behavior.
+- **Customized product bundles.** The benchmark uses a fixed Mercedes-Benz E350 customization catalog as a concrete pricing substrate.
+- **Multi-round seller actions.** A seller may make an offer, accept a buyer counter-offer, or walk away. Outcomes are scored by deal completion, seller profit, rounds used, walkaway behavior, and invalid action rates.
+- **Shared evaluation protocol.** Heuristic and LLM agents are evaluated on the same persona splits, catalog, simulator transition logic, action schema, and metrics.
+
+The vehicle-customization setting is one reproducible instance of a broader problem: evaluating pricing agents when buyer preferences are partially hidden and agreement alone is not the objective.
+
+## Repository Structure
+
+```text
+PrefBench/
+├── assets/                       # Figures used by this README
+├── catalog/                      # Fixed vehicle-customization catalog
+├── configs/                      # Persona, hidden-preference, and LLM configs
+├── datasets/                     # Public test split and LLM evaluation subset
+├── scripts/
+│   ├── agents/                   # Heuristic and LLM benchmark runners
+│   ├── analysis/                 # Result summarization utilities
+│   └── data/                     # Persona-bank and subset generation scripts
+├── src/
+│   ├── pricing_env/              # Simulator, WTP model, personas, NegMAS backend
+│   └── pricing_agent/            # Heuristic policies and LLM interface
+├── requirements.txt
+└── README.md
+```
+
+Generated reports, traces, prompts, API-key configs, local notes, and local drafts are not tracked. Experiment outputs are written under `artifacts/` by default, and local LLM credentials should be stored in `configs/llm_api.local.json`.
 
 ## Installation
 
 Prerequisites:
 
-- Linux
+- Linux or macOS
 - Python 3.10
-- Conda or Miniconda
+- Conda or another Python environment manager
 
-Create and activate the environment:
+Create an environment and install dependencies:
 
 ```bash
-conda create -n pricing-agent python=3.10 -y
-conda activate pricing-agent
+conda create -n prefbench python=3.10 -y
+conda activate prefbench
 python -m pip install --upgrade pip
 pip install -r requirements.txt
 ```
 
 ## Data
 
-The benchmark expects fixed assets under `catalog/`, `configs/`, and `datasets/`:
+The repository contains the fixed resources needed to run the main benchmark commands:
 
 - `catalog/e350_core_catalog.yaml`: fixed customization catalog.
-- `configs/personas_v2.yaml`: persona sampling entry config.
+- `configs/personas_v2.yaml`: persona generation entry config.
 - `configs/us_buyer_distribution_v2.yaml`: observable buyer-profile distribution.
-- `configs/persona_hidden_mapping_v1.yaml`: hidden preference and behavior mapping.
-- `datasets/persona_bank/bank50k_s123/`: generated persona bank with train/validation/test splits.
-- `datasets/persona_bank/bank50k_s123/llm_test_500.jsonl`: fixed cost-controlled test subset for main zero-shot LLM evaluation.
+- `configs/persona_hidden_mapping_v1.yaml`: mapping from observable profiles to hidden preference and behavior variables.
+- `datasets/persona_bank/bank50k_s123/test.jsonl`: 7,500-episode held-out test split.
+- `datasets/persona_bank/bank50k_s123/llm_test_500.jsonl`: fixed 500-episode subset for cost-controlled LLM evaluation.
 
-Regenerate the persona bank if needed:
+Large train, validation, and combined persona-bank files are not tracked to keep the repository lightweight.
 
-```bash
-python scripts/data/build_persona_bank.py \
-  --count 50000 \
-  --seed 123 \
-  --output-dir datasets/persona_bank/bank50k_s123 \
-  --overwrite
-```
+## Heuristic Baselines
 
-Regenerate the fixed 500-episode LLM evaluation subset:
-
-```bash
-python scripts/data/build_eval_subset.py \
-  --source-path datasets/persona_bank/bank50k_s123/test.jsonl \
-  --output-path datasets/persona_bank/bank50k_s123/llm_test_500.jsonl \
-  --metadata-path datasets/persona_bank/bank50k_s123/llm_test_500_metadata.json \
-  --count 500 \
-  --seed 20260501 \
-  --subset-name llm_test_500 \
-  --overwrite
-```
-
-Summarize the frozen persona bank for simulator sanity checks:
-
-```bash
-python scripts/data/summarize_simulator.py \
-  --persona-bank-path datasets/persona_bank/bank50k_s123/persona_bank.jsonl \
-  --output artifacts/simulator/sanity_summary.json
-```
-
-Simulator assumptions are documented in `docs/SIMULATOR_CARD.md`.
-
-## Run Heuristic Benchmark
-
-Run the checkpoint-free heuristic benchmark on the fixed test split:
+Run the checkpoint-free reference policies on the full held-out test split:
 
 ```bash
 python scripts/agents/run_benchmark.py \
-  --episodes 100 \
+  --episodes 7500 \
   --seed 123 \
+  --persona-bank-path datasets/persona_bank/bank50k_s123/test.jsonl \
+  --persona-bank-split test \
   --policies random,concession \
-  --report-out artifacts/heuristic/benchmark_test.json
+  --run-name heuristic_test \
+  --report-out artifacts/heuristic/full_test7500/report.json \
+  --episodes-out artifacts/heuristic/full_test7500/episodes.jsonl
 ```
 
-The report is written as JSON and includes profit, deal rate, walkaway rate, average rounds, average trace length, seed metadata, and shared-episode verification.
+The heuristic runners use the same simulator, persona stream, and hidden-state boundary as the LLM runners. The concession policy is a non-learned reference that starts from an anchored offer and concedes toward a floor over seller turns.
 
-## Run LLM Benchmark
+## LLM Agents
 
-The LLM runner uses an OpenAI-compatible `/chat/completions` API. Copy the
-example config, paste your provider settings into the local JSON file, then
-select one named LLM run on the fixed 500-episode subset:
+The LLM runner calls an OpenAI-compatible `/chat/completions` endpoint. Copy the example config and fill in a local provider configuration:
 
 ```bash
 cp configs/llm_api.example.json configs/llm_api.local.json
-# Edit configs/llm_api.local.json. Each entry under "runs" defines one LLM.
-# For DeepSeek V4, keep response_format={"type": "json_object"} and
-# thinking={"type": "disabled"} for strict action JSON.
+```
 
+`configs/llm_api.local.json` is gitignored so API keys are not committed. Each entry under `runs` defines one provider-facing model configuration.
+
+Run one named LLM configuration on the fixed 500-episode subset:
+
+```bash
 python scripts/agents/run_llm_benchmark.py \
   --api-config configs/llm_api.local.json \
   --llm-run-name deepseek_v4_flash \
@@ -109,72 +108,43 @@ python scripts/agents/run_llm_benchmark.py \
   --report-out artifacts/llm/deepseek_v4_flash_llm_test_500.json
 ```
 
-`configs/llm_api.local.json` is gitignored so real API keys are not committed.
-Only `configs/llm_api.example.json` is tracked as the shareable template.
+The LLM receives a rendered observable state summary and must return one JSON object with a supported `move`. The parser requires `price_offer_usd` only for offer actions. Malformed JSON, unsupported moves, missing offer prices, non-numeric offer prices, and negative offer prices are counted as invalid LLM outputs. The runner does not replace invalid outputs with fallback actions.
 
-The LLM must return a single JSON object with `move`, `price_offer_usd`, and
-optional `reason`. Invalid JSON or invalid actions terminate that episode and
-are counted in the report; the runner does not execute a fallback action.
+The summary report stores aggregate metrics. Sidecar JSONL files derived from `--report-out` store per-episode records, traces, and prompts, for example `*_episodes.jsonl`, `*_trace.jsonl`, and `*_prompts.jsonl`. Long LLM runs flush these files periodically and can resume from completed episode rows when the same output paths are reused.
 
-The summary report stores aggregate metrics only. Per-episode records, per-step
-traces, and prompts are written to sidecar JSONL files derived from
-`--report-out`, for example `*_episodes.jsonl`, `*_trace.jsonl`, and
-`*_prompts.jsonl`.
+## Result Snapshot
 
-Long LLM runs flush sidecar JSONL files periodically. If a provider error stops
-a run, rerun the same command with the same output paths; the runner resumes
-from the completed episode rows already present in `*_episodes.jsonl`.
+The table below reports representative full-test results on the fixed 7,500-episode held-out split. LLM agents are evaluated zero-shot with prompt version `v1`; heuristic policies are evaluated under the same simulator, episode seeds, action schema, and hidden-information boundary.
 
-The main experiments use `--prompt-version v1`. `v2` adds more explicit
-observable-state descriptions and can be used as a prompt-clarity ablation.
+| Policy | Deal rate | Avg. profit (USD) | Avg. rounds | Walkaway rate | Invalid rate |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| Random | 0.5769 | 6,572.33 | 1.3541 | 0.4231 | 0.0000 |
+| Concession heuristic | 0.7268 | 14,774.11 | 1.7123 | 0.2732 | 0.0000 |
+| DeepSeek V4 Flash | 0.9903 | 6,749.21 | 1.0313 | 0.0097 | 0.0000 |
+| Kimi K2.6 | 1.0000 | 4,514.43 | 1.0000 | 0.0000 | 0.0000 |
+| Qwen3.6 Plus | 0.9985 | 5,979.55 | 1.0036 | 0.0015 | 0.0000 |
 
-## Repository Structure
+These results illustrate the benchmark's diagnostic separation: zero-shot LLM agents can produce valid structured actions and close deals at high rates, while still earning substantially lower seller profit than a simple concession heuristic. PrefBench therefore evaluates strategic pricing quality, not only language-interface compliance or agreement seeking.
 
-```text
-PrefBench/
-├── catalog/                      # Fixed product catalog
-├── configs/                      # Persona and simulator configuration
-├── datasets/                     # Persona bank and split files
-├── scripts/
-│   ├── agents/                   # Benchmark entry points
-│   └── data/                     # Persona-bank generation
-├── src/
-│   ├── pricing_env/              # Simulator, WTP, persona, NegMAS backend
-│   └── pricing_agent/            # Checkpoint-free heuristic policies
-├── arxiv_paper/                  # arXiv report draft
-├── docs/                         # Planning and roadmap notes
-├── requirements.txt
-└── Agents.md
-```
+## Code and Data Availability
 
-Generated outputs such as reports and logs are written under `artifacts/`.
+This repository is intended to accompany the PrefBench manuscript. It includes the simulator, benchmark runners, fixed public test split, fixed LLM evaluation subset, catalog and persona configs, reference heuristic baselines, OpenAI-compatible LLM evaluation code, and scripts for reproducing aggregate metrics.
 
-## Current Scope
+The repository does not include provider API keys, local experiment outputs, large train/validation persona-bank files, local notes, or local drafts.
 
-Implemented:
+## Paper and Citation
 
-- fixed customization catalog;
-- semi-synthetic persona bank and split generation;
-- multi-round negotiation simulator;
-- random and concession heuristic baselines;
-- structured JSON benchmark report.
-
-Planned next:
-
-- LLM-facing observation renderer;
-- structured JSON action parser;
-- zero-shot LLM benchmark runner;
-- invalid-action and cost/token reporting for LLM runs.
+A manuscript describing PrefBench is in preparation. Citation information and the paper link will be added after the paper is publicly available. Until then, please cite this repository if you use the benchmark code or data.
 
 ## Acknowledgements
 
-This codebase builds on or interfaces with:
+PrefBench builds on or interfaces with:
 
-- [NegMAS](https://github.com/yasserfarouk/negmas): negotiation mechanism support.
-- [PyYAML](https://pyyaml.org/) and standard Python tooling for reproducible simulation and data generation.
+- [NegMAS](https://github.com/yasserfarouk/negmas) for negotiation mechanism support.
+- [PyYAML](https://pyyaml.org/) and standard Python tooling for reproducible configuration, simulation, and data generation.
 
-The benchmark customization catalog is derived from publicly available Mercedes-Benz E350 configuration information. Mercedes-Benz and related model names are used only as an anchor for research benchmark construction and remain the property of their respective owners.
+The customization catalog is derived from publicly available Mercedes-Benz E350 configuration information and is used only as a research benchmark anchor. Mercedes-Benz and related model names remain the property of their respective owners. This project is not affiliated with, endorsed by, or sponsored by Mercedes-Benz.
 
 ## License
 
-This project is released under the MIT License. See [LICENSE](LICENSE) for details.
+This project is distributed under the MIT License. See [LICENSE](LICENSE) for details.
