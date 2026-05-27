@@ -128,13 +128,29 @@ These results illustrate the benchmark's diagnostic separation: zero-shot LLM ag
 
 ## Code and Data Availability
 
-This repository is intended to accompany the PrefBench manuscript. It includes the simulator, benchmark runners, fixed public test split, fixed LLM evaluation subset, catalog and persona configs, reference heuristic baselines, OpenAI-compatible LLM evaluation code, and scripts for reproducing aggregate metrics.
+This repository accompanies the PrefBench arXiv paper. It includes the simulator, benchmark runners, fixed public test split, fixed LLM evaluation subset, catalog and persona configs, reference heuristic baselines, OpenAI-compatible LLM evaluation code, and scripts for reproducing aggregate metrics.
 
 The repository does not include provider API keys, local experiment outputs, large train/validation persona-bank files, local notes, or local drafts.
 
 ## Paper and Citation
 
-A manuscript describing PrefBench is in preparation. Citation information and the paper link will be added after the paper is publicly available. Until then, please cite this repository if you use the benchmark code or data.
+The PrefBench paper is available on arXiv:
+
+- [PrefBench: Evaluating Zero-Shot LLM Agents in Hidden-Preference Personalized Pricing Negotiations](https://arxiv.org/abs/2605.22855)
+
+If you use the benchmark code or data, please cite:
+
+```bibtex
+@misc{lei2026prefbenchevaluatingzeroshotllm,
+      title={PrefBench: Evaluating Zero-Shot LLM Agents in Hidden-Preference Personalized Pricing Negotiations}, 
+      author={Yingjie Lei},
+      year={2026},
+      eprint={2605.22855},
+      archivePrefix={arXiv},
+      primaryClass={cs.GT},
+      url={https://arxiv.org/abs/2605.22855}, 
+}
+```
 
 ## Acknowledgements
 
